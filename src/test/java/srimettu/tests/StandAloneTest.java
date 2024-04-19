@@ -21,6 +21,7 @@ public class StandAloneTest extends baseTest{
 		landingpage.selectLang();
 		//Dashboard dashboard=landingpage.loginApplication("s2", "s2");
 		Dashboard dashboard=landingpage.loginApplication();
+		System.out.println("Login Success");
 		dashboard.mAlarmClear("M Alarm Clear Test");
 		dashboard.logoutApplication();
 		
@@ -39,6 +40,7 @@ public class StandAloneTest extends baseTest{
 		landingpage.selectLang();
 		//landingpage.loginApplication("s2", "s2");
 		Dashboard dashboard=landingpage.loginApplication();
+		System.out.println("Login Success");
 		dashboard.bAlertClear("Beacon Alert Clear Test");
 		dashboard.logoutApplication();
 		
@@ -55,12 +57,14 @@ public class StandAloneTest extends baseTest{
 		landingpage.selectLang();
 		//landingpage.loginApplication("s1", "s1");	
 		landingpage.loginApplication();	
+		System.out.println("Login Success");
 		
 	}
 	@Test(dependsOnMethods= {"logIn"})
 	public void logOut() throws IOException {
 		//landingpage.loginApplication("s1", "s1");	
 		landingpage.loginApplication();
+		System.out.println("Login Success");
 		Dashboard dashboard = new Dashboard(driver);
 		dashboard.logoutApplication();;
 	}
