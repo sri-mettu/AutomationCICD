@@ -77,7 +77,7 @@ public class UserManagement extends AbstractComponent {
 		//selectCountry();
 		unote.sendKeys(note);
 		usubmit.click();
-		uback.click();	
+		//uback.click();	
 		   }		
    public void selectCountry(){
 	   ucountry.click();

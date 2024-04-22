@@ -2,7 +2,6 @@ package srimettu.tests;
 
 import java.io.IOException;
 
-import org.testng.IRetryAnalyzer;
 import org.testng.annotations.Test;
 import srimettu.TestComponents.*;
 import srimettu.pageobjects.Dashboard;
@@ -10,7 +9,7 @@ import srimettu.pageobjects.UserManagement;
 
 public class UserManagementTest extends baseTest{		
 
-	@Test(enabled=false)
+	@Test(enabled=true)
 	public void userAdd() throws IOException {
 		landingpage.selectLang();		
 		Dashboard dashboard=landingpage.loginApplication();
@@ -33,7 +32,7 @@ public class UserManagementTest extends baseTest{
 		dashboard.logoutApplication();
 		
 	}
-	@Test(enabled=true)
+	@Test(enabled=true,dependsOnMethods= {"userAdd"})
 	public void assignDev() throws IOException, InterruptedException {
 		landingpage.selectLang();		
 		Dashboard dashboard=landingpage.loginApplication();		
