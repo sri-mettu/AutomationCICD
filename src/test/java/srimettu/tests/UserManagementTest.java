@@ -10,7 +10,7 @@ import srimettu.pageobjects.UserManagement;
 
 public class UserManagementTest extends baseTest{		
 
-	@Test(enabled=false)
+	@Test(enabled=true)
 	public void userAdd() throws IOException {
 		landingpage.selectLang();		
 		Dashboard dashboard=landingpage.loginApplication();
