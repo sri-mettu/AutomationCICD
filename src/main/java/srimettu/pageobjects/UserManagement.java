@@ -73,11 +73,9 @@ public class UserManagement extends AbstractComponent {
 		usurname.sendKeys(usn);
 		udob.sendKeys(dob);
 		uphone.sendKeys(phone);		
-		uemail.sendKeys(email);	
-		//selectCountry();
+		uemail.sendKeys(email);		
 		unote.sendKeys(note);
-		usubmit.click();
-		//uback.click();	
+		usubmit.click();		
 		   }		
    public void selectCountry(){
 	   ucountry.click();
