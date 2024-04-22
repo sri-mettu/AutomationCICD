@@ -22,13 +22,13 @@ public class UserManagementTest extends baseTest{
 		dashboard.logoutApplication();
 		
 	}
-	@Test(enabled=false)
+	@Test(enabled=true,dependsOnMethods= {"userAdd"})
 	public void userEdit() throws IOException, InterruptedException {
 		landingpage.selectLang();		
 		Dashboard dashboard=landingpage.loginApplication();		
 		landingpage.menubutton();		
 		UserManagement userManagement = new UserManagement(driver);		
-		userManagement.eidtUser("A1","U1");
+		userManagement.eidtUser("Auto1","User1");
 		System.out.println("User Edited");
 		dashboard.logoutApplication();
 		
@@ -55,7 +55,7 @@ public class UserManagementTest extends baseTest{
 		dashboard.logoutApplication();
 		
 	}
-	@Test(enabled=true)
+	@Test(enabled=true,dependsOnMethods= {"userAdd"})
 	public void userDelete() throws IOException, InterruptedException {
 		landingpage.selectLang();		
 		Dashboard dashboard=landingpage.loginApplication();		
