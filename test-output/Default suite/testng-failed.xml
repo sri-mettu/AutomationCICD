@@ -5,9 +5,9 @@
     <classes>
       <class name="srimettu.tests.UserManagementTest">
         <methods>
-          <include name="assignDev"/>
-          <include name="unassignDev"/>
+          <include name="userAdd"/>
           <include name="quitBrowser"/>
+          <include name="userDelete"/>
           <include name="launchApplication"/>
         </methods>
       </class> <!-- srimettu.tests.UserManagementTest -->
