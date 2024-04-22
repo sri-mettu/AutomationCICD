@@ -50,6 +50,7 @@ public class Dashboard extends AbstractComponent {
 		MtextBox.sendKeys(reason);
 		mClear.click();
 		System.out.println("Maintenance Alarm Cleared");
+		
 
 	}
 
