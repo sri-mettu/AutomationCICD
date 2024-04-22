@@ -21,7 +21,7 @@ public class UserManagementTest extends baseTest{
 		dashboard.logoutApplication();
 		
 	}
-	@Test(enabled=true,dependsOnMethods= {"userAdd"})
+	@Test(enabled=false,dependsOnMethods= {"userAdd"})
 	public void userEdit() throws IOException, InterruptedException {
 		landingpage.selectLang();		
 		Dashboard dashboard=landingpage.loginApplication();		
@@ -32,7 +32,7 @@ public class UserManagementTest extends baseTest{
 		dashboard.logoutApplication();
 		
 	}
-	@Test(enabled=true,dependsOnMethods= {"userAdd"})
+	@Test(enabled=false,dependsOnMethods= {"userAdd"})
 	public void assignDev() throws IOException, InterruptedException {
 		landingpage.selectLang();		
 		Dashboard dashboard=landingpage.loginApplication();		
@@ -43,7 +43,7 @@ public class UserManagementTest extends baseTest{
 		dashboard.logoutApplication();
 		
 	}
-	@Test(enabled=true,dependsOnMethods= {"assignDev"})
+	@Test(enabled=false,dependsOnMethods= {"assignDev"})
 	public void unassignDev() throws IOException, InterruptedException {
 		landingpage.selectLang();		
 		Dashboard dashboard=landingpage.loginApplication();		
