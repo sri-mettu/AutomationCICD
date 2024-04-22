@@ -51,6 +51,16 @@ public class UserManagementTest extends baseTest{
 		dashboard.logoutApplication();
 		
 	}
+	@Test(enabled=true)
+	public void userDelete() throws IOException, InterruptedException {
+		landingpage.selectLang();		
+		Dashboard dashboard=landingpage.loginApplication();		
+		landingpage.menubutton();		
+		UserManagement userManagement = new UserManagement(driver);		
+		userManagement.userDel("test");
+		dashboard.logoutApplication();
+		
+	}
 	
 	
 }

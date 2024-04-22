@@ -60,6 +60,8 @@ public class UserManagement extends AbstractComponent {
 	WebElement reasonBox;
 	@FindBy(xpath="(//button[@type='submit'])[2]")
 	WebElement dsubmit;
+	@FindBy(xpath="(//i[@class='icon-trash icon'])[4]")
+	WebElement udelete;
 	
 	
 
@@ -142,7 +144,13 @@ public class UserManagement extends AbstractComponent {
 		 //Thread.sleep(2000);
 		 dsubmit.click();
 	 }
-	 
+	 public void userDel(String reason) {
+		 usermanag.click();
+		 menubutton();
+		 udelete.click();
+		 reasonBox.sendKeys(reason);
+		 usubmit.click();		 
+	 }
 	 }
 
 

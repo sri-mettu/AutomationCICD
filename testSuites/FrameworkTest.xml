@@ -6,8 +6,8 @@
 	</listeners>
   <test thread-count="5" name="StandaloneTest">
     <classes>
-      <class name="srimettu.tests.StandAloneTest"/>
-      
+      <class name="srimettu.tests.StandAloneTest"/>          
+      <class name="srimettu.tests.UserManagementTest"/>      
     </classes>
   </test> 
   <!-- Test -->
