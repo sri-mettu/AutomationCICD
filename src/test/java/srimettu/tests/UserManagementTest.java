@@ -16,8 +16,9 @@ public class UserManagementTest extends baseTest{
 		Dashboard dashboard=landingpage.loginApplication();
 		System.out.println("Login Success");
 		landingpage.menubutton();		
-		UserManagement userManagement = new UserManagement(driver);
+		UserManagement userManagement = new UserManagement(driver);		
 		userManagement.addUser("Auto", "User", "20/07/1975", "0123456789", "user@user.com", "AutoAdd");
+		System.out.println("User Added");
 		dashboard.logoutApplication();
 		
 	}
@@ -28,6 +29,7 @@ public class UserManagementTest extends baseTest{
 		landingpage.menubutton();		
 		UserManagement userManagement = new UserManagement(driver);		
 		userManagement.eidtUser("A1","U1");
+		System.out.println("User Edited");
 		dashboard.logoutApplication();
 		
 	}
@@ -38,6 +40,7 @@ public class UserManagementTest extends baseTest{
 		landingpage.menubutton();		
 		UserManagement userManagement = new UserManagement(driver);		
 		userManagement.assignDev();
+		System.out.println("User Device Assigned");
 		dashboard.logoutApplication();
 		
 	}
@@ -48,6 +51,7 @@ public class UserManagementTest extends baseTest{
 		landingpage.menubutton();		
 		UserManagement userManagement = new UserManagement(driver);		
 		userManagement.unassignDev("test");
+		System.out.println("User Device Un-Assigned");
 		dashboard.logoutApplication();
 		
 	}
@@ -58,6 +62,7 @@ public class UserManagementTest extends baseTest{
 		landingpage.menubutton();		
 		UserManagement userManagement = new UserManagement(driver);		
 		userManagement.userDel("test");
+		System.out.println("User Deleted");
 		dashboard.logoutApplication();
 		
 	}
