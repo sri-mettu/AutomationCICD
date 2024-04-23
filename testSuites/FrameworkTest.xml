@@ -3,10 +3,10 @@
 <suite name="Suite">
 	<listeners>
 		<listener class-name="srimettu.TestComponents.Listeners"/>
-	</listeners>
-  <test thread-count="5" name="StandaloneTest">
+	</listeners>   
+  <test thread-count="5" name="deviceManagementTest">
     <classes>              
-      <class name="srimettu.tests.UserManagementTest"/>      
+      <class name="srimettu.tests.deviceManagementTest"/>      
     </classes>
   </test> 
   <!-- Test -->

@@ -3,6 +3,7 @@ package srimettu.AbstractComponents;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -24,9 +25,11 @@ public class AbstractComponent {
 	
 	@FindBy(id = "appSidebarTogglerv")
 	WebElement menubutton;
+	@FindBy(xpath = "//div/input")
+	WebElement search;
 
 	public void waitForWebElementToAppear(WebElement findBy) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.visibilityOf(findBy));
 	}
 
@@ -47,6 +50,12 @@ public class AbstractComponent {
 		menubutton.click();
 		
 	}
+	public void search(String text) throws InterruptedException{
+		Thread.sleep(2000);
+		   search.sendKeys(text);
+		   
+		   search.sendKeys(Keys.ENTER);		   
+				}
 	public void invokeBrowser() {
 		
 		WebDriver driver = new ChromeDriver();
