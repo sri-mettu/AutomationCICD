@@ -9,7 +9,7 @@ import srimettu.AbstractComponents.AbstractComponent;
 
 public class Dashboard extends AbstractComponent {
 	WebDriver driver;
-
+	
 	public Dashboard(WebDriver driver) {
 		super(driver);
 		this.driver = driver;
@@ -37,6 +37,15 @@ public class Dashboard extends AbstractComponent {
 	WebElement bclose;
 	@FindBy(css = "i[class*='logout']")
 	WebElement logout;
+	@FindBy(css = "#mat-button-toggle-3-button")
+	WebElement mableHistory;
+	@FindBy(css = "div[class='tableTitle']")
+	public
+	WebElement htitle;
+	@FindBy(id = "mat-button-toggle-2-button")
+	public
+	WebElement alarmHistory;
+
 
 	public String getPageName() {
 		
@@ -63,13 +72,30 @@ public class Dashboard extends AbstractComponent {
 		System.out.println("Beacon Alert Cleared");
 
 	}
-	public void logoutApplication() {
+	public void logoutApplication() throws InterruptedException {
 		
 		menubutton();	
+		//scrollWindow(menunav);
 		scrollToLogout(logout);
 		//logout.click();
 		System.out.println("Logged Out");
-		driver.quit();
+		
 	}
-
+public String mabHis() throws InterruptedException {
+	
+		scrollWindow();
+		mableHistory.click();
+		System.out.println(htitle.getText());
+		return htitle.getText();
+		
+		
+	}
+public String alarmHis() throws InterruptedException {				
+	scrollWindow();
+	alarmHistory.click();
+	System.out.println(htitle.getText());
+	return htitle.getText();
+	
+	
+}
 }
