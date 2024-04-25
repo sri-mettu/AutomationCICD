@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="srimettu.tests.deviceManagementTest">
+      <class name="srimettu.tests.StandAloneTest">
         <methods>
-          <include name="deviceEdit"/>
           <include name="quitBrowser"/>
+          <include name="alarmHistory"/>
           <include name="launchApplication"/>
         </methods>
-      </class> <!-- srimettu.tests.deviceManagementTest -->
+      </class> <!-- srimettu.tests.StandAloneTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

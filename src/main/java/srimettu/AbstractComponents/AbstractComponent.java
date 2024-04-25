@@ -3,6 +3,7 @@ package srimettu.AbstractComponents;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -27,6 +28,13 @@ public class AbstractComponent {
 	WebElement menubutton;
 	@FindBy(xpath = "//div/input")
 	WebElement search;
+	@FindBy(css= "i[class*='logout']")
+	WebElement logout;
+	@FindBy(css= ".mat-drawer-inner-container.ng-tns-c230-0")
+	WebElement menuscroll;
+	@FindBy(css= ".mat-drawer-content.mat-sidenav-content")
+	WebElement sidenav;
+	//
 
 	public void waitForWebElementToAppear(WebElement findBy) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
@@ -38,12 +46,20 @@ public class AbstractComponent {
 		driver.manage().window().maximize();
 	}
 
-	public void scrollToLogout(WebElement logout2) {
-
-		WebElement logout = driver.findElement(By.cssSelector("i[class*='logout']"));
-
+	public void scrollToLogout(WebElement logout2) throws InterruptedException {
+		WebElement logout = driver.findElement(By.cssSelector("i[class*='logout']"));		
 		new Actions(driver).scrollToElement(logout).click();
 
+	}
+	public void scrollWindow() throws InterruptedException {
+		waitForWebElementToAppear(sidenav);
+		Thread.sleep(2000);
+		JavascriptExecutor js = (JavascriptExecutor)driver;			
+		//js.executeScript(navbar);
+		js.executeScript("document.querySelector('.mat-sidenav-content').scrollBy(0,700)");
+		
+
+		Thread.sleep(2000);		
 	}
 	public void menubutton() {
 		waitForWebElementToAppear(menubutton);
@@ -52,8 +68,7 @@ public class AbstractComponent {
 	}
 	public void search(String text) throws InterruptedException{
 		Thread.sleep(2000);
-		   search.sendKeys(text);
-		   
+		   search.sendKeys(text);		   
 		   search.sendKeys(Keys.ENTER);		   
 				}
 	public void invokeBrowser() {
