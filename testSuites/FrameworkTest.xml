@@ -9,5 +9,10 @@
       <class name="srimettu.tests.StandAloneTest"/>      
     </classes>
   </test> 
+  <test thread-count="5" name="EscortManagementTest">
+    <classes>              
+      <class name="srimettu.tests.EscortManagementTest"/>      
+    </classes>
+  </test> 
   <!-- Test -->
 </suite> <!-- Suite -->
