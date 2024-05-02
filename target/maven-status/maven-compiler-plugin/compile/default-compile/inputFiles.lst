@@ -1,4 +1,8 @@
-C:\Users\smettu\eclipse-selenium\SeleniumFrameworkDesign\src\main\java\srimettu\pageobjects\Dashboard.java
-C:\Users\smettu\eclipse-selenium\SeleniumFrameworkDesign\src\main\java\srimettu\pageobjects\LandingPage.java
-C:\Users\smettu\eclipse-selenium\SeleniumFrameworkDesign\src\main\java\srimettu\AbstractComponents\AbstractComponent.java
-C:\Users\smettu\eclipse-selenium\SeleniumFrameworkDesign\src\main\java\srimettu\resources\ExtentReporterNG.java
+C:\Users\smettu\CI-CD\src\main\java\srimettu\AbstractComponents\AbstractComponent.java
+C:\Users\smettu\CI-CD\src\main\java\srimettu\MainInvoker\ImpInvoker.java
+C:\Users\smettu\CI-CD\src\main\java\srimettu\pageobjects\Dashboard.java
+C:\Users\smettu\CI-CD\src\main\java\srimettu\pageobjects\DeviceManagement.java
+C:\Users\smettu\CI-CD\src\main\java\srimettu\pageobjects\EscortManagement.java
+C:\Users\smettu\CI-CD\src\main\java\srimettu\pageobjects\LandingPage.java
+C:\Users\smettu\CI-CD\src\main\java\srimettu\pageobjects\UserManagement.java
+C:\Users\smettu\CI-CD\src\main\java\srimettu\resources\ExtentReporterNG.java

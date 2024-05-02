@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.asserts.SoftAssert;
 
 import srimettu.AbstractComponents.AbstractComponent;
 
@@ -60,6 +61,7 @@ public class Dashboard extends AbstractComponent {
 		mClear.click();
 		System.out.println("Maintenance Alarm Cleared");
 		
+		
 
 	}
 
@@ -74,10 +76,9 @@ public class Dashboard extends AbstractComponent {
 	}
 	public void logoutApplication() throws InterruptedException {
 		
-		menubutton();	
-		//scrollWindow(menunav);
-		scrollToLogout(logout);
-		//logout.click();
+		menubutton();			
+		scrollLogout();
+		logout.click();
 		System.out.println("Logged Out");
 		
 	}

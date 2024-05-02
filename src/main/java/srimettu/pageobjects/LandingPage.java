@@ -48,7 +48,8 @@ public class LandingPage extends AbstractComponent {
 		Properties prop = new Properties();
 		FileInputStream fis = new FileInputStream(
 				System.getProperty("user.dir") + "\\src\\main\\java\\srimettu\\resources\\GlobalData.properties");
-		prop.load(fis);
+				//System.getProperty("user.dir") + "//src//main//java//srimettu//resources//GlobalData.properties");
+				prop.load(fis);
 		String lang = System.getProperty("language")!=null ? System.getProperty("language") :prop.getProperty("language");
 		WebElement Languagedropdown = selLang;
 		Select dropdown = new Select(Languagedropdown);
@@ -62,7 +63,8 @@ public class LandingPage extends AbstractComponent {
 	Properties prop = new Properties();
 		FileInputStream fis = new FileInputStream(
 				System.getProperty("user.dir") + "\\src\\main\\java\\srimettu\\resources\\GlobalData.properties");
-		prop.load(fis);
+				//System.getProperty("user.dir") + "//src//main//java//srimettu//resources//GlobalData.properties");
+				prop.load(fis);
 		String user = System.getProperty("uname")!=null ? System.getProperty("uname") :prop.getProperty("uname");
 		String pwd = System.getProperty("pwd")!=null ? System.getProperty("pwd") :prop.getProperty("pwd");
 		username.sendKeys(user);

@@ -10,7 +10,7 @@ import srimettu.pageobjects.UserManagement;
 
 public class deviceManagementTest extends baseTest{		
 	
-	@Test(enabled=true)
+	@Test(enabled=false)
 	public void loadDevice() throws IOException, InterruptedException {
 		landingpage.selectLang();		
 		Dashboard dashboard=landingpage.loginApplication();

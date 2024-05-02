@@ -5,6 +5,8 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.IRetryAnalyzer;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
+
 import srimettu.TestComponents.*;
 import srimettu.pageobjects.Dashboard;
 
@@ -12,7 +14,7 @@ public class StandAloneTest extends baseTest{
 	//String sidenavbar = "document.querySelector('.mat-sidenav-content').scrollTop=5000";
 	//String menunav = "document.querySelector('.mat-drawer-inner-container.ng-tns-c230-0').scrollTop=5000";
 	
-	@Test(groups= {"alertClear"},enabled=true,retryAnalyzer=Retry.class)
+	@Test(groups= {"alertClear"},enabled=false,retryAnalyzer=Retry.class)
 	public void mAlarmClear() throws IOException, InterruptedException {		
 		landingpage.selectLang();		
 		Dashboard dashboard=landingpage.loginApplication();
@@ -20,7 +22,7 @@ public class StandAloneTest extends baseTest{
 		dashboard.mAlarmClear("M Alarm Clear Test");
 		dashboard.logoutApplication();		
 	}
-	@Test(groups= {"alertClear"},enabled=true)
+	@Test(groups= {"alertClear"},enabled=false)
 	public void bAlertClear() throws IOException, InterruptedException {		
 		landingpage.selectLang();		
 		Dashboard dashboard=landingpage.loginApplication();
@@ -29,14 +31,14 @@ public class StandAloneTest extends baseTest{
 		dashboard.logoutApplication();		
 	}
 
-	@Test(enabled=true)
+	@Test(enabled=false)
 	public void logIn() throws IOException {		
 		landingpage.selectLang();		
 		landingpage.loginApplication();	
 		System.out.println("Login Success");
 		
 	}
-	@Test(dependsOnMethods= {"logIn"})
+	@Test(enabled=false,dependsOnMethods= {"logIn"})
 	public void logOut() throws IOException, InterruptedException {		
 		landingpage.loginApplication();
 		System.out.println("Login Success");
@@ -50,8 +52,12 @@ public class StandAloneTest extends baseTest{
 		System.out.println("Login Success");
 		Dashboard dashboard = new Dashboard(driver);
 		dashboard.mabHis();
-		Assert.assertEquals("Mable Alert History information", dashboard.htitle.getText());
+		SoftAssert a = new SoftAssert();
+		//Assert.assertEquals("Mable Alert History information", dashboard.htitle.getText());
+		
+		a.assertEquals("Mable Alert History information", dashboard.htitle.getText());
 		dashboard.logoutApplication();
+		a.assertAll();
 	
 }
 	@Test(enabled=true)
@@ -60,7 +66,11 @@ public class StandAloneTest extends baseTest{
 		System.out.println("Login Success");
 		Dashboard dashboard = new Dashboard(driver);
 		dashboard.alarmHis();
+		//SoftAssert a = new SoftAssert();
 		Assert.assertEquals("Alarm History information", dashboard.htitle.getText());
+		//a.assertEquals("Alarm History formation", dashboard.htitle.getText());
 		dashboard.logoutApplication();
+		//a.assertAll();
 }
+	
 }

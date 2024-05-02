@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Surefire test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>6/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Apr 18 08:54:36 BST 2024</td>
+<td>Started on:</td><td>Thu May 02 09:45:15 BST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>20 seconds (20544 ms)</td>
+<tr><td>Total time:</td><td>56 seconds (56007 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,31 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='cucumber.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Invalid Login check", "Login Check"</td>
-<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
-	at srimettu.stepDefinitions.StepDefenitionImpl.invalidLogin(StepDefenitionImpl.java:31)
-	at ✽.&quot;invalid username or password....(If forgot username or password then contact your supervisor or administrator)&quot; message is displayed(file:///C:/Users/smettu/eclipse-selenium/SeleniumFrameworkDesign/src/test/java/cucumber/InvalidLogin.feature:10)
-... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1583722422", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1583722422'><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at org.testng.Assert.assertTrue(Assert.java:67)
-	at srimettu.stepDefinitions.StepDefenitionImpl.invalidLogin(StepDefenitionImpl.java:31)
-	at ✽.&quot;invalid username or password....(If forgot username or password then contact your supervisor or administrator)&quot; message is displayed(file:///C:/Users/smettu/eclipse-selenium/SeleniumFrameworkDesign/src/test/java/cucumber/InvalidLogin.feature:10)
-</pre></div></td>
-<td>3</td>
-<td>cucumber.TestNGTestRunner@2667f029</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -101,15 +76,35 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='cucumber.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Beacon Alert Clear", "Clearing the Alert"</td>
+<td title='srimettu.tests.EscortManagementTest.deleteEscortEvent()'><b>deleteEscortEvent</b><br>Test class: srimettu.tests.EscortManagementTest</td>
 <td></td>
-<td>8</td>
-<td>cucumber.TestNGTestRunner@2667f029</td></tr>
+<td>4</td>
+<td>srimettu.tests.EscortManagementTest@1190200a</td></tr>
 <tr>
-<td title='cucumber.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Maintenance Alert Clear", "Clearing the Alert"</td>
+<td title='cucumber.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Invalid Login check", "Login Check"</td>
 <td></td>
-<td>7</td>
-<td>cucumber.TestNGTestRunner@2667f029</td></tr>
+<td>4</td>
+<td>cucumber.TestNGTestRunner@7c9d8e2</td></tr>
+<tr>
+<td title='srimettu.tests.deviceManagementTest.deviceEdit()'><b>deviceEdit</b><br>Test class: srimettu.tests.deviceManagementTest</td>
+<td></td>
+<td>6</td>
+<td>srimettu.tests.deviceManagementTest@707194ba</td></tr>
+<tr>
+<td title='srimettu.tests.StandAloneTest.alarmHistory()'><b>alarmHistory</b><br>Test class: srimettu.tests.StandAloneTest</td>
+<td></td>
+<td>6</td>
+<td>srimettu.tests.StandAloneTest@399c4be1</td></tr>
+<tr>
+<td title='srimettu.tests.EscortManagementTest.addEscortEvent()'><b>addEscortEvent</b><br>Test class: srimettu.tests.EscortManagementTest</td>
+<td></td>
+<td>11</td>
+<td>srimettu.tests.EscortManagementTest@1190200a</td></tr>
+<tr>
+<td title='srimettu.tests.StandAloneTest.mableHistory()'><b>mableHistory</b><br>Test class: srimettu.tests.StandAloneTest</td>
+<td></td>
+<td>6</td>
+<td>srimettu.tests.StandAloneTest@399c4be1</td></tr>
 </table><p>
 </body>
 </html>
