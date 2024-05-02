@@ -34,8 +34,8 @@ public class baseTest {
 		// properties class
 		Properties prop = new Properties();
 		FileInputStream fis = new FileInputStream(
-		System.getProperty("user.dir") + "\\src\\main\\java\\srimettu\\resources\\GlobalData.properties");
-				//System.getProperty("user.dir") + "//src//main//java//srimettu//resources//GlobalData.properties");	
+		//System.getProperty("user.dir") + "\\src\\main\\java\\srimettu\\resources\\GlobalData.properties");
+		System.getProperty("user.dir") + "//src//main//java//srimettu//resources//GlobalData.properties");	
 		prop.load(fis);
 		//Ternary operator
 		String browserName = System.getProperty("browser")!=null ? System.getProperty("browser") :prop.getProperty("browser");
@@ -73,8 +73,8 @@ public class baseTest {
 	public LandingPage launchApplication() throws IOException {
 		Properties prop = new Properties();
 		FileInputStream fis = new FileInputStream(
-				System.getProperty("user.dir") + "\\src\\main\\java\\srimettu\\resources\\GlobalData.properties");
-				//System.getProperty("user.dir") + "//src//main//java//srimettu//resources//GlobalData.properties");
+		//System.getProperty("user.dir") + "\\src\\main\\java\\srimettu\\resources\\GlobalData.properties");
+		System.getProperty("user.dir") + "//src//main//java//srimettu//resources//GlobalData.properties");
 		prop.load(fis);
 		String IP = System.getProperty("browserIP")!=null ? System.getProperty("browserIP") :prop.getProperty("browserIP");
 		//String browserIP = prop.getProperty("browserIP");
@@ -86,10 +86,10 @@ public class baseTest {
 	public String getScreenshot(String testCaseName,WebDriver driver) throws IOException {
 		TakesScreenshot ts = (TakesScreenshot)driver;
 		File source = ts.getScreenshotAs(OutputType.FILE);
-		File file = new File(System.getProperty("user.dir") + "\\reports\\" + 
+		File file = new File(System.getProperty("user.dir") + "//reports//" + 
 		testCaseName + ".png");
 		FileUtils.copyFile(source, file);
-		return System.getProperty("user.dir") + "\\reports\\" + testCaseName + ".png";
+		return System.getProperty("user.dir") + "//reports//" + testCaseName + ".png";
 	}
 
 	@AfterMethod(alwaysRun = true)
