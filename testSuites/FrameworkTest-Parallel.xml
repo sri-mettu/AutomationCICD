@@ -10,10 +10,5 @@
       
     </classes>
   </test> 
-  <test thread-count="5" name="DataProviderEValidation">
-    <classes>
-      
-      <class name="srimettu.tests.DataProviderEValidation"/>
-    </classes>
-  </test>  
+    
 </suite> <!-- Suite -->

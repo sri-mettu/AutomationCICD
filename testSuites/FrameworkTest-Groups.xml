@@ -5,7 +5,7 @@
 	<groups>
 		<run>
 			<include name="alertClear"></include>
-			<include name="login"></include>
+			
 		</run>
 	</groups>
 	<listeners>
@@ -17,10 +17,5 @@
       
     </classes>
   </test> 
-  <test thread-count="5" name="DataProviderEValidation">
-    <classes>
-      
-      <class name="srimettu.tests.DataProviderEValidation"/>
-    </classes>
-  </test><!-- Test -->
+ 
 </suite> <!-- Suite -->

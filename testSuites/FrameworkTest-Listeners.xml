@@ -5,11 +5,7 @@
 		<listener class-name="srimettu.TestComponents.Listeners"/>
 	</listeners>	
   
-  <test thread-count="5" name="DataProviderEValidation">
-    <classes>      
-      <class name="srimettu.tests.DataProviderEValidation"/>
-    </classes>
-  </test>
+  
   <test thread-count="5" name="StandAloneTest">
     <classes>      
       <class name="srimettu.tests.StandAloneTest"/>

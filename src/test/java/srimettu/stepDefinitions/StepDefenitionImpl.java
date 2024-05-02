@@ -47,9 +47,9 @@ public class StepDefenitionImpl extends baseTest{
 	}
 	
 	@Then ("Logout of the Application")
-	public void Logout_of_the_Application() throws InterruptedException {
-		Thread.sleep(2000);
+	public void Logout_of_the_Application() throws InterruptedException {		
 		dashboard.logoutApplication();
+		driver.quit();
 	}
 
 }

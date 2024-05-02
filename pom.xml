@@ -1,31 +1,51 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-
+	
 	<groupId>srimettu</groupId>
 	<artifactId>SeleniumFrameworkDesign</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-
-	<name>SeleniumFrameworkDesign</name>
-	<!-- FIXME change it to the project's website -->
-	<url>http://www.example.com</url>
+	<packaging>jar</packaging>
+	<name>SeleniumFrameworkDesign</name>	
+	<url>http://maven.apache.org</url>
 
 	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>		
 	</properties>
 
 	<dependencies>
+		<!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-classic -->
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.5.6</version>
+			<scope>test</scope>
+		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>7.9.0</version>
 		</dependency>
+		<!--
+		https://mvnrepository.com/artifact/org.apache.maven.shared/maven-invoker -->
+		<dependency>
+			<groupId>org.apache.maven.shared</groupId>
+			<artifactId>maven-invoker</artifactId>
+			<version>3.2.0</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<!--
+		https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
+		<dependency>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-surefire-plugin</artifactId>
+			<version>3.2.5</version>
+		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
 		<dependency>
 			<groupId>com.aventstack</groupId>
@@ -52,7 +72,6 @@
 			<version>7.16.1</version>
 		</dependency>
 
-
 		<!--
 		https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
 		<dependency>
@@ -67,6 +86,7 @@
 			<artifactId>jackson-databind</artifactId>
 			<version>2.17.0</version>
 		</dependency>
+		
 	</dependencies>
 	<profiles>
 		<profile>
@@ -80,7 +100,7 @@
 							<version>3.2.5</version>
 							<configuration>
 								<suiteXmlFiles>
-									<suiteXmlFile>testSuites\FrameworkTest.xml</suiteXmlFile>
+									<suiteXmlFile>testSuites/FrameworkTest.xml</suiteXmlFile>
 								</suiteXmlFiles>
 							</configuration>
 						</plugin>
@@ -100,7 +120,7 @@
 							<configuration>
 								<suiteXmlFiles>
 									<suiteXmlFile>
-										testSuites\FrameworkTest-Groups.xml</suiteXmlFile>
+										testSuites/FrameworkTest-Groups.xml</suiteXmlFile>
 								</suiteXmlFiles>
 							</configuration>
 						</plugin>
@@ -120,7 +140,7 @@
 							<configuration>
 								<suiteXmlFiles>
 									<suiteXmlFile>
-										testSuites\FrameworkTest-Listeners.xml</suiteXmlFile>
+										testSuites/FrameworkTest-Listeners.xml</suiteXmlFile>
 								</suiteXmlFiles>
 							</configuration>
 						</plugin>
@@ -140,7 +160,7 @@
 							<configuration>
 								<suiteXmlFiles>
 									<suiteXmlFile>
-										testSuites\FrameworkTest-Parallel.xml</suiteXmlFile>
+										testSuites/FrameworkTest-Parallel.xml</suiteXmlFile>
 								</suiteXmlFiles>
 							</configuration>
 						</plugin>
@@ -159,8 +179,9 @@
 							<version>3.2.5</version>
 							<configuration>
 								<includes>
-									<include>**/TestNGTestRunner.java</include>>
-								</includes>
+									<include>**/TestNGTestRunner.java</include>
+									<include>**/TestNGRunner.java</include>
+									 </includes>
 							</configuration>
 						</plugin>
 					</plugins>
@@ -171,9 +192,36 @@
 	</profiles>
 
 	<build>
+
+		<resources>
+			<resource>
+				<directory>src/main/java/srimettu/resources</directory>
+				<targetPath>srimettu/resources</targetPath>
+				<includes>
+					<include>*.properties</include>
+				</includes>
+			</resource>
+		</resources>
+
 		<pluginManagement><!-- lock down plugins versions to avoid using Maven
 			defaults (may be moved to parent pom) -->
 			<plugins>
+
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>3.4.1</version>
+					<configuration>						
+						<archive>
+							<manifest>
+								<mainClass>srimettu.MainInvoker.ImpInvoker</mainClass>
+							</manifest>
+						</archive>
+					</configuration>
+				</plugin>
+
+
 				<!-- clean lifecycle, see
 				https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
 				<plugin>
@@ -186,18 +234,40 @@
 					<artifactId>maven-resources-plugin</artifactId>
 					<version>3.0.2</version>
 				</plugin>
+				
+        
+				<plugin>
+					<groupId>com.spotify</groupId>
+					<artifactId>dockerfile-maven-plugin</artifactId>
+					<version>1.4.13</version>
+					<executions>
+						<execution>
+							<id>default</id>
+							<goals>
+								<goal>build</goal>
+							</goals>
+						</execution>
+					</executions>
+					<configuration>
+						<repository>my-java-app</repository>
+						<tag>latest</tag>
+						<buildArgs>
+							<JAR_FILE>target/my-java-app.jar</JAR_FILE>
+						</buildArgs>
+					</configuration>
+				</plugin>
+
 				<plugin>
 					<artifactId>maven-compiler-plugin</artifactId>
-					<version>3.8.0</version>
+					<version>3.13.0</version>					
 				</plugin>
 				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-surefire-plugin</artifactId>
-					<version>2.22.1</version>
-				</plugin>
-				<plugin>
-					<artifactId>maven-jar-plugin</artifactId>
-					<version>3.0.2</version>
-				</plugin>
+					<version>3.2.5</version>
+					
+				</plugin>				
+
 				<plugin>
 					<artifactId>maven-install-plugin</artifactId>
 					<version>2.5.2</version>

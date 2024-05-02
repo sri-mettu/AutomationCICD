@@ -46,8 +46,9 @@ public class AbstractComponent {
 		driver.manage().window().maximize();
 	}
 
-	public void scrollToLogout(WebElement logout2) throws InterruptedException {
-		WebElement logout = driver.findElement(By.cssSelector("i[class*='logout']"));		
+	public void scrollToLogout() throws InterruptedException {
+		//WebElement logout = driver.findElement(By.cssSelector("i[class*='logout']"));	
+		waitForWebElementToAppear(logout);
 		new Actions(driver).scrollToElement(logout).click();
 
 	}
@@ -57,9 +58,14 @@ public class AbstractComponent {
 		JavascriptExecutor js = (JavascriptExecutor)driver;			
 		//js.executeScript(navbar);
 		js.executeScript("document.querySelector('.mat-sidenav-content').scrollBy(0,700)");
-		
-
 		Thread.sleep(2000);		
+	}
+	public void scrollLogout() throws InterruptedException {
+		waitForWebElementToAppear(menuscroll);
+		Thread.sleep(2000);
+		JavascriptExecutor js = (JavascriptExecutor)driver;			
+		js.executeScript("document.querySelector('.mat-drawer-inner-container').scrollBy(0,700)");
+				
 	}
 	public void menubutton() {
 		waitForWebElementToAppear(menubutton);

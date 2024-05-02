@@ -35,6 +35,7 @@ public class baseTest {
 		Properties prop = new Properties();
 		FileInputStream fis = new FileInputStream(
 		System.getProperty("user.dir") + "\\src\\main\\java\\srimettu\\resources\\GlobalData.properties");
+				//System.getProperty("user.dir") + "//src//main//java//srimettu//resources//GlobalData.properties");	
 		prop.load(fis);
 		//Ternary operator
 		String browserName = System.getProperty("browser")!=null ? System.getProperty("browser") :prop.getProperty("browser");
@@ -73,6 +74,7 @@ public class baseTest {
 		Properties prop = new Properties();
 		FileInputStream fis = new FileInputStream(
 				System.getProperty("user.dir") + "\\src\\main\\java\\srimettu\\resources\\GlobalData.properties");
+				//System.getProperty("user.dir") + "//src//main//java//srimettu//resources//GlobalData.properties");
 		prop.load(fis);
 		String IP = System.getProperty("browserIP")!=null ? System.getProperty("browserIP") :prop.getProperty("browserIP");
 		//String browserIP = prop.getProperty("browserIP");
@@ -92,9 +94,10 @@ public class baseTest {
 
 	@AfterMethod(alwaysRun = true)
 	public void quitBrowser() {
-		driver.quit();
-	}
+		 if (driver != null) {
+		        driver.quit();
+		    }
 
 	
-
+	}
 }

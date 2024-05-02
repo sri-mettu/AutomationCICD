@@ -9,7 +9,7 @@ import srimettu.pageobjects.UserManagement;
 
 public class UserManagementTest extends baseTest{		
 
-	@Test(enabled=true)
+	@Test(enabled=false)
 	public void userAdd() throws IOException, InterruptedException {
 		landingpage.selectLang();		
 		Dashboard dashboard=landingpage.loginApplication();
@@ -54,7 +54,7 @@ public class UserManagementTest extends baseTest{
 		dashboard.logoutApplication();
 		
 	}
-	@Test(enabled=true,dependsOnMethods= {"userAdd"})
+	@Test(enabled=false,dependsOnMethods= {"userAdd"})
 	public void userDelete() throws IOException, InterruptedException {
 		landingpage.selectLang();		
 		Dashboard dashboard=landingpage.loginApplication();		

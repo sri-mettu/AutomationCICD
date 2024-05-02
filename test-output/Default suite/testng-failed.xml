@@ -5,8 +5,8 @@
     <classes>
       <class name="srimettu.tests.EscortManagementTest">
         <methods>
-          <include name="addEscortEvent"/>
           <include name="quitBrowser"/>
+          <include name="deleteEscortEvent"/>
           <include name="launchApplication"/>
         </methods>
       </class> <!-- srimettu.tests.EscortManagementTest -->

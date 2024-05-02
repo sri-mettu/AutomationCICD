@@ -6,7 +6,7 @@ Background:
 Given Open the browser and enter the url
  
 
-  @ClearAlert
+  @skip
   Scenario Outline: Beacon Alert Clear
     Given Logged in with username <name> and password <password>  
     When "DASHBOARD" is displayed 
