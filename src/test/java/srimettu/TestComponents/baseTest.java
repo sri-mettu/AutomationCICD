@@ -34,19 +34,21 @@ public class baseTest {
 		// properties class
 		Properties prop = new Properties();
 		FileInputStream fis = new FileInputStream(
-		//System.getProperty("user.dir") + "\\src\\main\\java\\srimettu\\resources\\GlobalData.properties");
-		System.getProperty("user.dir") + "//src//main//java//srimettu//resources//GlobalData.properties");	
+				// System.getProperty("user.dir") +
+				// "\\src\\main\\java\\srimettu\\resources\\GlobalData.properties");
+				System.getProperty("user.dir") + "//src//main//java//srimettu//resources//GlobalData.properties");
 		prop.load(fis);
-		//Ternary operator
-		String browserName = System.getProperty("browser")!=null ? System.getProperty("browser") :prop.getProperty("browser");
-		//String browserName = prop.getProperty("browser");
+		// Ternary operator
+		String browserName = System.getProperty("browser") != null ? System.getProperty("browser")
+				: prop.getProperty("browser");
+		// String browserName = prop.getProperty("browser");
 		if (browserName.contains("chrome")) {
 			ChromeOptions options = new ChromeOptions();
 			if (browserName.contains("headless")) {
-			options.addArguments("headless");
+				options.addArguments("headless");
 			}
 			driver = new ChromeDriver(options);
-			driver.manage().window().setSize(new Dimension(1440,900));//full Screen
+			driver.manage().window().setSize(new Dimension(1440, 900));// full Screen
 		} else if (browserName.equalsIgnoreCase("firefox")) {
 			driver = new FirefoxDriver();
 		} else if (browserName.equalsIgnoreCase("edge")) {
@@ -73,31 +75,32 @@ public class baseTest {
 	public LandingPage launchApplication() throws IOException {
 		Properties prop = new Properties();
 		FileInputStream fis = new FileInputStream(
-		//System.getProperty("user.dir") + "\\src\\main\\java\\srimettu\\resources\\GlobalData.properties");
-		System.getProperty("user.dir") + "//src//main//java//srimettu//resources//GlobalData.properties");
+				// System.getProperty("user.dir") +
+				// "\\src\\main\\java\\srimettu\\resources\\GlobalData.properties");
+				System.getProperty("user.dir") + "//src//main//java//srimettu//resources//GlobalData.properties");
 		prop.load(fis);
-		String IP = System.getProperty("browserIP")!=null ? System.getProperty("browserIP") :prop.getProperty("browserIP");
-		//String browserIP = prop.getProperty("browserIP");
+		String IP = System.getProperty("browserIP") != null ? System.getProperty("browserIP")
+				: prop.getProperty("browserIP");
+		// String browserIP = prop.getProperty("browserIP");
 		driver = initializeBrowser();
 		landingpage = new LandingPage(driver);
 		landingpage.goTo(IP);
 		return landingpage;
 	}
-	public String getScreenshot(String testCaseName,WebDriver driver) throws IOException {
-		TakesScreenshot ts = (TakesScreenshot)driver;
+
+	public String getScreenshot(String testCaseName, WebDriver driver) throws IOException {
+		TakesScreenshot ts = (TakesScreenshot) driver;
 		File source = ts.getScreenshotAs(OutputType.FILE);
-		File file = new File(System.getProperty("user.dir") + "//reports//" + 
-		testCaseName + ".png");
+		File file = new File(System.getProperty("user.dir") + "//reports//" + testCaseName + ".png");
 		FileUtils.copyFile(source, file);
 		return System.getProperty("user.dir") + "//reports//" + testCaseName + ".png";
 	}
 
 	@AfterMethod(alwaysRun = true)
 	public void quitBrowser() {
-		 if (driver != null) {
-		        driver.quit();
-		    }
+		if (driver != null) {
+			driver.quit();
+		}
 
-	
 	}
 }

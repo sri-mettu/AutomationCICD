@@ -8,55 +8,12 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Command line suite</th></tr>
-<tr><td><a href="#t0">Command line test</a></td><td class="num">10</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">126,785</td><td></td><td></td></tr>
+<tr><th colspan="8">Default suite</th></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">19,577</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Command line suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Command line test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">srimettu.tests.deviceManagementTest</td><td><a href="#m0">deviceEdit</a></td><td rowspan="1">1714569143056</td><td rowspan="1">60738</td></tr><tr><th colspan="4">Command line test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="6">srimettu.tests.DataProviderEValidation</td><td><a href="#m1">InvalidlogIn</a></td><td rowspan="2">1714569121596</td><td rowspan="2">822</td></tr><tr class="passedeven"><td><a href="#m2">InvalidlogIn</a></td></tr><tr class="passedeven"><td><a href="#m3">logInCheck</a></td><td rowspan="2">1714569132648</td><td rowspan="2">597</td></tr><tr class="passedeven"><td><a href="#m4">logInCheck</a></td></tr><tr class="passedeven"><td><a href="#m5">logInCheckdata</a></td><td rowspan="2">1714569139705</td><td rowspan="2">599</td></tr><tr class="passedeven"><td><a href="#m6">logInCheckdata</a></td></tr><tr class="passedodd"><td rowspan="2">srimettu.tests.EscortManagementTest</td><td><a href="#m7">addEscortEvent</a></td><td rowspan="1">1714569206728</td><td rowspan="1">11145</td></tr><tr class="passedodd"><td><a href="#m8">deleteEscortEvent</a></td><td rowspan="1">1714569220697</td><td rowspan="1">4537</td></tr><tr class="passedeven"><td rowspan="2">srimettu.tests.StandAloneTest</td><td><a href="#m9">alarmHistory</a></td><td rowspan="1">1714569228101</td><td rowspan="1">6729</td></tr><tr class="passedeven"><td><a href="#m10">mableHistory</a></td><td rowspan="1">1714569237636</td><td rowspan="1">6923</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">srimettu.tests.EscortManagementTest</td><td><a href="#m0">addEscortEvent</a></td><td rowspan="1">1714740157190</td><td rowspan="1">8764</td></tr><tr class="passedeven"><td><a href="#m1">deleteEscortEvent</a></td><td rowspan="1">1714740168777</td><td rowspan="1">4342</td></tr></tbody>
 </table>
-<h2>Command line test</h2><h3 id="m0">srimettu.tests.deviceManagementTest#deviceEdit</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=124.0.6367.78)
-Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b80b3119eb49089a7fae6c572e1d800b, findElement {using=id, value=appSidebarTogglerv}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.78, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\smettu\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59434}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59434/devtoo..., se:cdpVersion: 124.0.6367.78, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b80b3119eb49089a7fae6c572e1d800b
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy10.toString(Unknown Source)
-	at java.base/java.lang.StringConcatHelper.stringOf(StringConcatHelper.java:467)
-	at java.base/java.lang.StringConcatHelper.simpleConcat(StringConcatHelper.java:422)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.toString(ExpectedConditions.java:295)
-	at java.base/java.lang.StringConcatHelper.stringOf(StringConcatHelper.java:467)
-	at java.base/java.lang.StringConcatHelper.simpleConcat(StringConcatHelper.java:422)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:225)
-	at srimettu.AbstractComponents.AbstractComponent.waitForWebElementToAppear(AbstractComponent.java:41)
-	at srimettu.AbstractComponents.AbstractComponent.menubutton(AbstractComponent.java:71)
-	at srimettu.tests.deviceManagementTest.deviceEdit(deviceManagementTest.java:28)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at srimettu.tests.TestNGRunner.main(TestNGRunner.java:18)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">srimettu.tests.DataProviderEValidation#InvalidlogIn</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>s1</td><td>s2</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">srimettu.tests.DataProviderEValidation#InvalidlogIn</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>s2</td><td>s3</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">srimettu.tests.DataProviderEValidation#logInCheck</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{pwd=s3, un=s3}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">srimettu.tests.DataProviderEValidation#logInCheck</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{pwd=s2, un=s2}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">srimettu.tests.DataProviderEValidation#logInCheckdata</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{password=s3, username=s3}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">srimettu.tests.DataProviderEValidation#logInCheckdata</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{password=s2, username=s2}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">srimettu.tests.EscortManagementTest#addEscortEvent</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m8">srimettu.tests.EscortManagementTest#deleteEscortEvent</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m9">srimettu.tests.StandAloneTest#alarmHistory</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m10">srimettu.tests.StandAloneTest#mableHistory</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Default test</h2><h3 id="m0">srimettu.tests.EscortManagementTest#addEscortEvent</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">srimettu.tests.EscortManagementTest#deleteEscortEvent</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
