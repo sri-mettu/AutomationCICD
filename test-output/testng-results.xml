@@ -1,283 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="11" passed="10" failed="1" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-01T14:11:58 BST" name="Command line suite" finished-at="2024-05-01T14:14:04 BST" duration-ms="126785">
+  <suite started-at="2024-05-03T13:42:33 BST" name="Default suite" finished-at="2024-05-03T13:42:53 BST" duration-ms="19577">
     <groups>
-      <group name="login">
-        <method signature="DataProviderEValidation.InvalidlogIn(java.lang.String,java.lang.String)[pri:0, instance:srimettu.tests.DataProviderEValidation@3c87521]" name="InvalidlogIn" class="srimettu.tests.DataProviderEValidation"/>
-        <method signature="DataProviderEValidation.logInCheck(java.util.HashMap)[pri:0, instance:srimettu.tests.DataProviderEValidation@3c87521]" name="logInCheck" class="srimettu.tests.DataProviderEValidation"/>
-        <method signature="DataProviderEValidation.logInCheckdata(java.util.HashMap)[pri:0, instance:srimettu.tests.DataProviderEValidation@3c87521]" name="logInCheckdata" class="srimettu.tests.DataProviderEValidation"/>
-      </group> <!-- login -->
     </groups>
-    <test started-at="2024-05-01T14:11:58 BST" name="Command line test" finished-at="2024-05-01T14:14:04 BST" duration-ms="126785">
-      <class name="srimettu.tests.DataProviderEValidation">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:srimettu.tests.DataProviderEValidation@3c87521]" started-at="2024-05-01T14:11:58 BST" name="launchApplication" finished-at="2024-05-01T14:12:01 BST" duration-ms="3416" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="InvalidlogIn(java.lang.String,java.lang.String)[pri:0, instance:srimettu.tests.DataProviderEValidation@3c87521]" started-at="2024-05-01T14:12:01 BST" name="InvalidlogIn" data-provider="getData" finished-at="2024-05-01T14:12:02 BST" duration-ms="822" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[s1]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[s2]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- InvalidlogIn -->
-        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:srimettu.tests.DataProviderEValidation@3c87521]" started-at="2024-05-01T14:12:02 BST" name="quitBrowser" finished-at="2024-05-01T14:12:02 BST" duration-ms="282" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quitBrowser -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:srimettu.tests.DataProviderEValidation@3c87521]" started-at="2024-05-01T14:12:02 BST" name="launchApplication" finished-at="2024-05-01T14:12:05 BST" duration-ms="2995" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="InvalidlogIn(java.lang.String,java.lang.String)[pri:0, instance:srimettu.tests.DataProviderEValidation@3c87521]" started-at="2024-05-01T14:12:05 BST" name="InvalidlogIn" data-provider="getData" finished-at="2024-05-01T14:12:06 BST" duration-ms="629" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[s2]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[s3]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- InvalidlogIn -->
-        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:srimettu.tests.DataProviderEValidation@3c87521]" started-at="2024-05-01T14:12:06 BST" name="quitBrowser" finished-at="2024-05-01T14:12:06 BST" duration-ms="262" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quitBrowser -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:srimettu.tests.DataProviderEValidation@3c87521]" started-at="2024-05-01T14:12:06 BST" name="launchApplication" finished-at="2024-05-01T14:12:09 BST" duration-ms="2699" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="logInCheck(java.util.HashMap)[pri:0, instance:srimettu.tests.DataProviderEValidation@3c87521]" started-at="2024-05-01T14:12:09 BST" name="logInCheck" data-provider="getData1" finished-at="2024-05-01T14:12:09 BST" duration-ms="587" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{pwd=s2, un=s2}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logInCheck -->
-        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:srimettu.tests.DataProviderEValidation@3c87521]" started-at="2024-05-01T14:12:09 BST" name="quitBrowser" finished-at="2024-05-01T14:12:10 BST" duration-ms="238" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quitBrowser -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:srimettu.tests.DataProviderEValidation@3c87521]" started-at="2024-05-01T14:12:10 BST" name="launchApplication" finished-at="2024-05-01T14:12:12 BST" duration-ms="2516" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="logInCheck(java.util.HashMap)[pri:0, instance:srimettu.tests.DataProviderEValidation@3c87521]" started-at="2024-05-01T14:12:12 BST" name="logInCheck" data-provider="getData1" finished-at="2024-05-01T14:12:13 BST" duration-ms="597" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{pwd=s3, un=s3}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logInCheck -->
-        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:srimettu.tests.DataProviderEValidation@3c87521]" started-at="2024-05-01T14:12:13 BST" name="quitBrowser" finished-at="2024-05-01T14:12:13 BST" duration-ms="264" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quitBrowser -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:srimettu.tests.DataProviderEValidation@3c87521]" started-at="2024-05-01T14:12:13 BST" name="launchApplication" finished-at="2024-05-01T14:12:16 BST" duration-ms="2614" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="logInCheckdata(java.util.HashMap)[pri:0, instance:srimettu.tests.DataProviderEValidation@3c87521]" started-at="2024-05-01T14:12:16 BST" name="logInCheckdata" data-provider="getData2" finished-at="2024-05-01T14:12:16 BST" duration-ms="651" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{password=s2, username=s2}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logInCheckdata -->
-        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:srimettu.tests.DataProviderEValidation@3c87521]" started-at="2024-05-01T14:12:16 BST" name="quitBrowser" finished-at="2024-05-01T14:12:17 BST" duration-ms="240" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quitBrowser -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:srimettu.tests.DataProviderEValidation@3c87521]" started-at="2024-05-01T14:12:17 BST" name="launchApplication" finished-at="2024-05-01T14:12:19 BST" duration-ms="2539" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="logInCheckdata(java.util.HashMap)[pri:0, instance:srimettu.tests.DataProviderEValidation@3c87521]" started-at="2024-05-01T14:12:19 BST" name="logInCheckdata" data-provider="getData2" finished-at="2024-05-01T14:12:20 BST" duration-ms="599" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{password=s3, username=s3}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logInCheckdata -->
-        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:srimettu.tests.DataProviderEValidation@3c87521]" started-at="2024-05-01T14:12:20 BST" name="quitBrowser" finished-at="2024-05-01T14:12:20 BST" duration-ms="228" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quitBrowser -->
-      </class> <!-- srimettu.tests.DataProviderEValidation -->
-      <class name="srimettu.tests.StandAloneTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:srimettu.tests.StandAloneTest@3745e5c6]" started-at="2024-05-01T14:13:45 BST" name="launchApplication" finished-at="2024-05-01T14:13:48 BST" duration-ms="2583" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="alarmHistory()[pri:0, instance:srimettu.tests.StandAloneTest@3745e5c6]" started-at="2024-05-01T14:13:48 BST" name="alarmHistory" finished-at="2024-05-01T14:13:54 BST" duration-ms="6729" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- alarmHistory -->
-        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:srimettu.tests.StandAloneTest@3745e5c6]" started-at="2024-05-01T14:13:54 BST" name="quitBrowser" finished-at="2024-05-01T14:13:55 BST" duration-ms="280" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quitBrowser -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:srimettu.tests.StandAloneTest@3745e5c6]" started-at="2024-05-01T14:13:55 BST" name="launchApplication" finished-at="2024-05-01T14:13:57 BST" duration-ms="2525" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="mableHistory()[pri:0, instance:srimettu.tests.StandAloneTest@3745e5c6]" started-at="2024-05-01T14:13:57 BST" name="mableHistory" finished-at="2024-05-01T14:14:04 BST" duration-ms="6923" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- mableHistory -->
-        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:srimettu.tests.StandAloneTest@3745e5c6]" started-at="2024-05-01T14:14:04 BST" name="quitBrowser" finished-at="2024-05-01T14:14:04 BST" duration-ms="347" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quitBrowser -->
-      </class> <!-- srimettu.tests.StandAloneTest -->
+    <test started-at="2024-05-03T13:42:33 BST" name="Default test" finished-at="2024-05-03T13:42:53 BST" duration-ms="19577">
       <class name="srimettu.tests.EscortManagementTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:srimettu.tests.EscortManagementTest@327b636c]" started-at="2024-05-01T14:13:23 BST" name="launchApplication" finished-at="2024-05-01T14:13:26 BST" duration-ms="2772" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:srimettu.tests.EscortManagementTest@478db956]" started-at="2024-05-03T13:42:33 BST" name="launchApplication" finished-at="2024-05-03T13:42:37 BST" duration-ms="3320" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="addEscortEvent()[pri:0, instance:srimettu.tests.EscortManagementTest@327b636c]" started-at="2024-05-01T14:13:26 BST" name="addEscortEvent" finished-at="2024-05-01T14:13:37 BST" duration-ms="11145" status="PASS">
+        <test-method signature="addEscortEvent()[pri:0, instance:srimettu.tests.EscortManagementTest@478db956]" started-at="2024-05-03T13:42:37 BST" name="addEscortEvent" finished-at="2024-05-03T13:42:45 BST" duration-ms="8764" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addEscortEvent -->
-        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:srimettu.tests.EscortManagementTest@327b636c]" started-at="2024-05-01T14:13:37 BST" name="quitBrowser" finished-at="2024-05-01T14:13:38 BST" duration-ms="293" status="PASS">
+        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:srimettu.tests.EscortManagementTest@478db956]" started-at="2024-05-03T13:42:45 BST" name="quitBrowser" finished-at="2024-05-03T13:42:46 BST" duration-ms="320" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitBrowser -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:srimettu.tests.EscortManagementTest@327b636c]" started-at="2024-05-01T14:13:38 BST" name="launchApplication" finished-at="2024-05-01T14:13:40 BST" duration-ms="2529" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:srimettu.tests.EscortManagementTest@478db956]" started-at="2024-05-03T13:42:46 BST" name="launchApplication" finished-at="2024-05-03T13:42:48 BST" duration-ms="2495" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="deleteEscortEvent()[pri:0, instance:srimettu.tests.EscortManagementTest@327b636c]" started-at="2024-05-01T14:13:40 BST" name="deleteEscortEvent" finished-at="2024-05-01T14:13:45 BST" duration-ms="4537" status="PASS">
+        <test-method signature="deleteEscortEvent()[pri:0, instance:srimettu.tests.EscortManagementTest@478db956]" started-at="2024-05-03T13:42:48 BST" name="deleteEscortEvent" finished-at="2024-05-03T13:42:53 BST" duration-ms="4342" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteEscortEvent -->
-        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:srimettu.tests.EscortManagementTest@327b636c]" started-at="2024-05-01T14:13:45 BST" name="quitBrowser" finished-at="2024-05-01T14:13:45 BST" duration-ms="282" status="PASS">
+        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:srimettu.tests.EscortManagementTest@478db956]" started-at="2024-05-03T13:42:53 BST" name="quitBrowser" finished-at="2024-05-03T13:42:53 BST" duration-ms="278" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitBrowser -->
       </class> <!-- srimettu.tests.EscortManagementTest -->
-      <class name="srimettu.tests.deviceManagementTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:srimettu.tests.deviceManagementTest@6ab7a896]" started-at="2024-05-01T14:12:20 BST" name="launchApplication" finished-at="2024-05-01T14:12:23 BST" duration-ms="2523" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="deviceEdit()[pri:0, instance:srimettu.tests.deviceManagementTest@6ab7a896]" started-at="2024-05-01T14:12:23 BST" name="deviceEdit" finished-at="2024-05-01T14:13:23 BST" duration-ms="60738" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchWindowException">
-            <message>
-              <![CDATA[no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=124.0.6367.78)
-Build info: version: '4.19.1', revision: 'abe0ee07dc'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b80b3119eb49089a7fae6c572e1d800b, findElement {using=id, value=appSidebarTogglerv}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.78, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\smettu\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59434}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59434/devtoo..., se:cdpVersion: 124.0.6367.78, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b80b3119eb49089a7fae6c572e1d800b]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=124.0.6367.78)
-Build info: version: '4.19.1', revision: 'abe0ee07dc'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b80b3119eb49089a7fae6c572e1d800b, findElement {using=id, value=appSidebarTogglerv}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.78, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\smettu\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59434}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59434/devtoo..., se:cdpVersion: 124.0.6367.78, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b80b3119eb49089a7fae6c572e1d800b
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy10.toString(Unknown Source)
-at java.base/java.lang.StringConcatHelper.stringOf(StringConcatHelper.java:467)
-at java.base/java.lang.StringConcatHelper.simpleConcat(StringConcatHelper.java:422)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.toString(ExpectedConditions.java:295)
-at java.base/java.lang.StringConcatHelper.stringOf(StringConcatHelper.java:467)
-at java.base/java.lang.StringConcatHelper.simpleConcat(StringConcatHelper.java:422)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:225)
-at srimettu.AbstractComponents.AbstractComponent.waitForWebElementToAppear(AbstractComponent.java:41)
-at srimettu.AbstractComponents.AbstractComponent.menubutton(AbstractComponent.java:71)
-at srimettu.tests.deviceManagementTest.deviceEdit(deviceManagementTest.java:28)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at srimettu.tests.TestNGRunner.main(TestNGRunner.java:18)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deviceEdit -->
-        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:srimettu.tests.deviceManagementTest@6ab7a896]" started-at="2024-05-01T14:13:23 BST" name="quitBrowser" finished-at="2024-05-01T14:13:23 BST" duration-ms="159" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quitBrowser -->
-      </class> <!-- srimettu.tests.deviceManagementTest -->
-    </test> <!-- Command line test -->
-  </suite> <!-- Command line suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

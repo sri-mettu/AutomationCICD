@@ -2,92 +2,92 @@
 <testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-02T09:45:15 BST" name="Surefire suite" finished-at="2024-05-02T09:46:11 BST" duration-ms="56007">
+  <suite started-at="2024-05-03T14:51:51 BST" name="Surefire suite" finished-at="2024-05-03T14:52:46 BST" duration-ms="54270">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.TestNGTestRunner@7c9d8e2]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-05-02T09:45:15 BST" name="Surefire test" finished-at="2024-05-02T09:46:11 BST" duration-ms="56007">
+    <test started-at="2024-05-03T14:51:51 BST" name="Surefire test" finished-at="2024-05-03T14:52:46 BST" duration-ms="54270">
       <class name="srimettu.tests.StandAloneTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:srimettu.tests.StandAloneTest@399c4be1]" started-at="2024-05-02T09:45:51 BST" name="launchApplication" finished-at="2024-05-02T09:45:54 BST" duration-ms="2681" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:srimettu.tests.StandAloneTest@399c4be1]" started-at="2024-05-03T14:52:27 BST" name="launchApplication" finished-at="2024-05-03T14:52:29 BST" duration-ms="2519" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="alarmHistory()[pri:0, instance:srimettu.tests.StandAloneTest@399c4be1]" started-at="2024-05-02T09:45:54 BST" name="alarmHistory" finished-at="2024-05-02T09:46:01 BST" duration-ms="6749" status="PASS">
+        <test-method signature="alarmHistory()[pri:0, instance:srimettu.tests.StandAloneTest@399c4be1]" started-at="2024-05-03T14:52:29 BST" name="alarmHistory" finished-at="2024-05-03T14:52:36 BST" duration-ms="6729" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- alarmHistory -->
-        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:srimettu.tests.StandAloneTest@399c4be1]" started-at="2024-05-02T09:46:01 BST" name="quitBrowser" finished-at="2024-05-02T09:46:01 BST" duration-ms="338" status="PASS">
+        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:srimettu.tests.StandAloneTest@399c4be1]" started-at="2024-05-03T14:52:36 BST" name="quitBrowser" finished-at="2024-05-03T14:52:36 BST" duration-ms="258" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitBrowser -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:srimettu.tests.StandAloneTest@399c4be1]" started-at="2024-05-02T09:46:01 BST" name="launchApplication" finished-at="2024-05-02T09:46:04 BST" duration-ms="3082" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:srimettu.tests.StandAloneTest@399c4be1]" started-at="2024-05-03T14:52:36 BST" name="launchApplication" finished-at="2024-05-03T14:52:39 BST" duration-ms="2534" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="mableHistory()[pri:0, instance:srimettu.tests.StandAloneTest@399c4be1]" started-at="2024-05-02T09:46:04 BST" name="mableHistory" finished-at="2024-05-02T09:46:11 BST" duration-ms="6824" status="PASS">
+        <test-method signature="mableHistory()[pri:0, instance:srimettu.tests.StandAloneTest@399c4be1]" started-at="2024-05-03T14:52:39 BST" name="mableHistory" finished-at="2024-05-03T14:52:45 BST" duration-ms="6794" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- mableHistory -->
-        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:srimettu.tests.StandAloneTest@399c4be1]" started-at="2024-05-02T09:46:11 BST" name="quitBrowser" finished-at="2024-05-02T09:46:11 BST" duration-ms="317" status="PASS">
+        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:srimettu.tests.StandAloneTest@399c4be1]" started-at="2024-05-03T14:52:45 BST" name="quitBrowser" finished-at="2024-05-03T14:52:46 BST" duration-ms="292" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitBrowser -->
       </class> <!-- srimettu.tests.StandAloneTest -->
       <class name="srimettu.tests.EscortManagementTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:srimettu.tests.EscortManagementTest@1190200a]" started-at="2024-05-02T09:45:30 BST" name="launchApplication" finished-at="2024-05-02T09:45:32 BST" duration-ms="2561" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:srimettu.tests.EscortManagementTest@1190200a]" started-at="2024-05-03T14:52:08 BST" name="launchApplication" finished-at="2024-05-03T14:52:10 BST" duration-ms="2478" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="addEscortEvent()[pri:0, instance:srimettu.tests.EscortManagementTest@1190200a]" started-at="2024-05-02T09:45:32 BST" name="addEscortEvent" finished-at="2024-05-02T09:45:43 BST" duration-ms="11114" status="PASS">
+        <test-method signature="addEscortEvent()[pri:0, instance:srimettu.tests.EscortManagementTest@1190200a]" started-at="2024-05-03T14:52:10 BST" name="addEscortEvent" finished-at="2024-05-03T14:52:19 BST" duration-ms="8370" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addEscortEvent -->
-        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:srimettu.tests.EscortManagementTest@1190200a]" started-at="2024-05-02T09:45:43 BST" name="quitBrowser" finished-at="2024-05-02T09:45:44 BST" duration-ms="321" status="PASS">
+        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:srimettu.tests.EscortManagementTest@1190200a]" started-at="2024-05-03T14:52:19 BST" name="quitBrowser" finished-at="2024-05-03T14:52:19 BST" duration-ms="291" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitBrowser -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:srimettu.tests.EscortManagementTest@1190200a]" started-at="2024-05-02T09:45:44 BST" name="launchApplication" finished-at="2024-05-02T09:45:46 BST" duration-ms="2610" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:srimettu.tests.EscortManagementTest@1190200a]" started-at="2024-05-03T14:52:19 BST" name="launchApplication" finished-at="2024-05-03T14:52:22 BST" duration-ms="2539" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="deleteEscortEvent()[pri:0, instance:srimettu.tests.EscortManagementTest@1190200a]" started-at="2024-05-02T09:45:46 BST" name="deleteEscortEvent" finished-at="2024-05-02T09:45:51 BST" duration-ms="4696" status="PASS">
+        <test-method signature="deleteEscortEvent()[pri:0, instance:srimettu.tests.EscortManagementTest@1190200a]" started-at="2024-05-03T14:52:22 BST" name="deleteEscortEvent" finished-at="2024-05-03T14:52:26 BST" duration-ms="4510" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteEscortEvent -->
-        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:srimettu.tests.EscortManagementTest@1190200a]" started-at="2024-05-02T09:45:51 BST" name="quitBrowser" finished-at="2024-05-02T09:45:51 BST" duration-ms="294" status="PASS">
+        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:srimettu.tests.EscortManagementTest@1190200a]" started-at="2024-05-03T14:52:26 BST" name="quitBrowser" finished-at="2024-05-03T14:52:27 BST" duration-ms="318" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitBrowser -->
       </class> <!-- srimettu.tests.EscortManagementTest -->
       <class name="srimettu.tests.deviceManagementTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:srimettu.tests.deviceManagementTest@707194ba]" started-at="2024-05-02T09:45:20 BST" name="launchApplication" finished-at="2024-05-02T09:45:23 BST" duration-ms="2740" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:srimettu.tests.deviceManagementTest@707194ba]" started-at="2024-05-03T14:51:57 BST" name="launchApplication" finished-at="2024-05-03T14:52:00 BST" duration-ms="2887" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="deviceEdit()[pri:0, instance:srimettu.tests.deviceManagementTest@707194ba]" started-at="2024-05-02T09:45:23 BST" name="deviceEdit" finished-at="2024-05-02T09:45:29 BST" duration-ms="6554" status="PASS">
+        <test-method signature="deviceEdit()[pri:0, instance:srimettu.tests.deviceManagementTest@707194ba]" started-at="2024-05-03T14:52:00 BST" name="deviceEdit" finished-at="2024-05-03T14:52:06 BST" duration-ms="6542" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deviceEdit -->
-        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:srimettu.tests.deviceManagementTest@707194ba]" started-at="2024-05-02T09:45:29 BST" name="quitBrowser" finished-at="2024-05-02T09:45:30 BST" duration-ms="328" status="PASS">
+        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:srimettu.tests.deviceManagementTest@707194ba]" started-at="2024-05-03T14:52:06 BST" name="quitBrowser" finished-at="2024-05-03T14:52:08 BST" duration-ms="1810" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitBrowser -->
       </class> <!-- srimettu.tests.deviceManagementTest -->
       <class name="cucumber.TestNGTestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:cucumber.TestNGTestRunner@7c9d8e2]" started-at="2024-05-02T09:45:15 BST" name="setUpClass" finished-at="2024-05-02T09:45:16 BST" duration-ms="560" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:cucumber.TestNGTestRunner@7c9d8e2]" started-at="2024-05-03T14:51:51 BST" name="setUpClass" finished-at="2024-05-03T14:51:52 BST" duration-ms="638" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@2eda4eeb]]>
+                <![CDATA[org.testng.TestRunner@1f782c05]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.TestNGTestRunner@7c9d8e2]" started-at="2024-05-02T09:45:16 BST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-02T09:45:20 BST" duration-ms="4097" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.TestNGTestRunner@7c9d8e2]" started-at="2024-05-03T14:51:52 BST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-03T14:51:57 BST" duration-ms="4584" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -103,7 +103,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:cucumber.TestNGTestRunner@7c9d8e2]" started-at="2024-05-02T09:45:20 BST" name="tearDownClass" finished-at="2024-05-02T09:45:20 BST" duration-ms="83" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:cucumber.TestNGTestRunner@7c9d8e2]" started-at="2024-05-03T14:51:57 BST" name="tearDownClass" finished-at="2024-05-03T14:51:57 BST" duration-ms="116" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
