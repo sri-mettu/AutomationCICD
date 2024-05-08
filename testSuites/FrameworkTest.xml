@@ -13,6 +13,17 @@
     <classes>              
       <class name="srimettu.tests.EscortManagementTest"/>      
     </classes>
+  </test>
+  <test thread-count="5" name="deviceManagementTest">
+    <classes>              
+      <class name="srimettu.tests.deviceManagementTest"/>      
+    </classes>
+  </test>  
+  <test thread-count="5" name="SysConfigTest">
+    <classes>              
+      <class name="srimettu.tests.SysConfigTest"/>      
+    </classes>
   </test> 
+  
   <!-- Test -->
 </suite> <!-- Suite -->
