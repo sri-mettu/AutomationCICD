@@ -11,7 +11,7 @@ import srimettu.pageobjects.DeviceManagement;
 
 public class deviceManagementTest extends baseTest {
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void loadDevice() throws IOException, InterruptedException {
 		landingpage.selectLang();
 		Dashboard dashboard = landingpage.loginApplication();
@@ -35,7 +35,7 @@ public class deviceManagementTest extends baseTest {
 		deviceManagement.editDev(1, 1);
 		dashboard.logoutApplication();
 	}
-
+/*
 	@Test(enabled = true)
 	public void addBeacon() throws IOException, InterruptedException {
 		landingpage.selectLang();
@@ -157,5 +157,5 @@ public class deviceManagementTest extends baseTest {
 		dashboard.logoutApplication();
 
 	}
-
+*/
 }

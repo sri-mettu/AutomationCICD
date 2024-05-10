@@ -11,10 +11,14 @@ import io.cucumber.java.en.When;
 import srimettu.TestComponents.baseTest;
 import srimettu.pageobjects.Dashboard;
 import srimettu.pageobjects.LandingPage;
+import srimettu.pageobjects.SystemConfig;
+import srimettu.pageobjects.DeviceManagement;
 
 public class StepDefenitionImpl extends baseTest{
 	public LandingPage landinpage;
 	public Dashboard dashboard;
+	public DeviceManagement devicemanagement;
+	public SystemConfig sysconfig;
 	@Given("Open the browser and enter the url")
 	public void Open_the_browser_and_enter_the_url() throws IOException {
 		landingpage = launchApplication();
@@ -51,5 +55,33 @@ public class StepDefenitionImpl extends baseTest{
 		dashboard.logoutApplication();
 		driver.quit();
 	}
-
+	@And ("Click on the menubutton")
+	public void click_on_the_menubutton() {
+		dashboard.menubutton();
+	}
+	@And ("Get HubIP address")
+	public void Get_HubIP_address() throws IOException, InterruptedException {
+		sysconfig.gethubIPaddr();
+	}
+	@And ("Click on device managemnet and Load the devices")
+	public void Click_on_device_managemnet_and_Load_the_devices() throws IOException, InterruptedException {
+		DeviceManagement devicemanagement =new DeviceManagement(driver);
+		devicemanagement.devLoad();
+	}
+	@And ("Click on device managemnet")
+	public void Click_on_device_managemnet() throws IOException, InterruptedException {
+		DeviceManagement devicemanagement =new DeviceManagement(driver);
+		devicemanagement.devicemanag.click();
+	}
+	@And ("^Search device id (.+)$")
+	public void Search_device_id(String id) throws InterruptedException {
+		DeviceManagement devicemanagement =new DeviceManagement(driver);
+		dashboard.menubutton();
+		devicemanagement.search(id);
+	}
+	@Then ("^Edit device with area (.+) and user (.+)$")
+	public void Edit_device(int ar, int usr) throws InterruptedException {
+		DeviceManagement devicemanagement =new DeviceManagement(driver);
+		devicemanagement.editDev(ar, usr);
+	}
 }
