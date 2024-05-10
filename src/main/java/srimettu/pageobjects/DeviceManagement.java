@@ -40,12 +40,14 @@ public class DeviceManagement extends AbstractComponent {
 	WebElement submit;
 	@FindBy(css = "button[class*='btn-secondary']")
 	WebElement close;
-	@FindBy(css = "button[class='close']")
+	@FindBy(css = "button[class='close'] span")
 	WebElement x;
 	@FindBy(xpath = "//a[text()='x']")
 	WebElement x1;
 	@FindBy(css = "div[aria-label*='Finished Loading']")
-	WebElement loadsuccess;
+	public WebElement loadsuccess;
+	@FindBy(css = "div[role='alert']")
+	public WebElement message;
 	@FindBy(css = "div[aria-label='Success']")
 	WebElement success;
 	@FindBy(css = "i[class='icon-pencil")
@@ -54,6 +56,12 @@ public class DeviceManagement extends AbstractComponent {
 	WebElement delete;
 	@FindBy(xpath = "//span/div")
 	WebElement selarea;
+	@FindBy(xpath = "(//span/div)[1]")
+	WebElement selareagw;
+	@FindBy(xpath = "(//span/div)[2]")
+	WebElement selhubgw;
+	@FindBy(xpath = "(//span/div)[3]")
+	WebElement selpggw;
 	@FindBy(xpath = "(//span[@class='mat-radio-inner-circle'])[2]")
 	WebElement seluserradio;
 	@FindBy(css = "span[class='mat-radio-inner-circle']")
@@ -84,6 +92,24 @@ public class DeviceManagement extends AbstractComponent {
 	WebElement devmac;
 	@FindBy(css = "button[class*='btn-primary']")
 	WebElement addsub;
+	@FindBy(css = "button[class='btn btn-primary']")
+	WebElement delsub;
+	@FindBy(css = "input[id='locationedit']")
+	WebElement areaname;
+	@FindBy(css = "span[class*='checkbox-inner']")
+	WebElement forbiddenChk;
+	@FindBy(xpath = "(//div/span)[1]")
+	WebElement assndev;
+	@FindBy(xpath = "(//span[contains(@class, 'multiselect__caret')])[1]")
+	WebElement caret1;
+	@FindBy(xpath = "(//div/span)[2]")
+	WebElement assngw;
+	@FindBy(xpath = "(//span[contains(@class, 'multiselect__caret')])[2]")
+	WebElement caret2;
+	@FindBy(css = "input[id='RSSI_tolerance-input']")
+	WebElement rssi;
+	@FindBy(css = "modal-container[class*='fade']")
+	WebElement fade;
 
 	public void devLoad() throws IOException, InterruptedException {
 		SystemConfig config = new SystemConfig(driver);
@@ -94,8 +120,11 @@ public class DeviceManagement extends AbstractComponent {
 		loaddev.click();
 		hubIPaddr.sendKeys(ip);
 		submit.click();
-		waitForWebElementToAppear(loadsuccess);
-		System.out.println(loadsuccess.getText());
+		waitForWebElementToAppear(message);
+		System.out.println(message.getText());
+		waitForWebElementTodisAppear(message);
+		waitForWebElementToAppear(message);
+		System.out.println(message.getText());
 
 	}
 
@@ -106,6 +135,8 @@ public class DeviceManagement extends AbstractComponent {
 		selectUserIndx(usr);
 		multiCaretuser.click();
 		submit.click();
+		waitForWebElementToAppear(message);
+		System.out.println(message.getText()+" Device Edited");
 
 	}
 
@@ -126,6 +157,36 @@ public class DeviceManagement extends AbstractComponent {
 		if (ar >= 0 && ar < areas.size()) {
 			WebElement area = areas.get(ar);
 			area.click();
+
+		}
+	}
+
+	public void selectAreagw(int ar) {
+		selareagw.click();
+		List<WebElement> areas = driver.findElements(By.xpath("(//div/ul[2])[1]/li"));
+		if (ar >= 0 && ar < areas.size()) {
+			WebElement area = areas.get(ar);
+			area.click();
+
+		}
+	}
+
+	public void selectHubgw(int hub) {
+		selhubgw.click();
+		List<WebElement> hubs = driver.findElements(By.xpath("(//div/ul[2])[2]/li"));
+		if (hub >= 0 && hub < hubs.size()) {
+			WebElement h = hubs.get(hub);
+			h.click();
+
+		}
+	}
+
+	public void selectPggw(int pg) {
+		selpggw.click();
+		List<WebElement> grps = driver.findElements(By.xpath("(//div/ul[2])[3]/li"));
+		if (pg >= 0 && pg < grps.size()) {
+			WebElement grp = grps.get(pg);
+			grp.click();
 
 		}
 	}
@@ -196,6 +257,38 @@ public class DeviceManagement extends AbstractComponent {
 
 	}
 
+	public void assgnDevice(int[] devs) {
+		assndev.click();
+		List<WebElement> devices = driver.findElements(By.xpath("(//div/ul[2])[1]/li"));
+		for (int dev : devs) {
+
+			if (dev >= 0 && dev < devices.size()) {
+				WebElement device = devices.get(dev);
+				device.click();
+			} else {
+				System.out.println("Invalid index: " + dev);
+			}
+		}
+		caret1.click();
+
+	}
+
+	public void assgnGateway(int[] gws) {
+		assngw.click();
+		List<WebElement> gateways = driver.findElements(By.xpath("(//div/ul[2])[2]/li"));
+		for (int gw : gws) {
+
+			if (gw >= 0 && gw < gateways.size()) {
+				WebElement gateway = gateways.get(gw);
+				gateway.click();
+			} else {
+				System.out.println("Invalid index: " + gw);
+			}
+		}
+		caret2.click();
+
+	}
+
 	public void beaconAdd(String devicename, String macaddr) throws InterruptedException {
 		mabledev.click();
 		Thread.sleep(2000);
@@ -204,7 +297,49 @@ public class DeviceManagement extends AbstractComponent {
 		devname.sendKeys(devicename);
 		devmac.sendKeys(macaddr);
 		addsub.click();
-		System.out.println("Beacon Added");
+		waitForWebElementToAppear(message);
+		System.out.println(message.getText()+" Beacon");
+	}
+
+	public void gwAdd(String devicename, String macaddr) throws InterruptedException {
+		mabledev.click();
+		Thread.sleep(2000);
+		mableadd.click();
+		gwadd.click();
+		devname.sendKeys(devicename);
+		devmac.sendKeys(macaddr);
+		addsub.click();
+		waitForWebElementToAppear(message);
+		System.out.println(message.getText()+ " Gateway");
+	}
+
+	public void gwEdit(String macaddr, String rssiv, int ar, int h, int pg) throws InterruptedException {
+		mabledev.click();
+		Thread.sleep(2000);
+		search.sendKeys(macaddr);
+		search.sendKeys(Keys.ENTER);
+		edit.click();
+		rssi.clear();
+		rssi.sendKeys(rssiv);
+		selectAreagw(ar);
+		selectHubgw(h);
+		selectPggw(pg);
+		submit.click();
+		waitForWebElementToAppear(message);
+		System.out.println(message.getText() + " Gateway Edited");
+	}
+
+	public void gwDelete(String macaddr) throws InterruptedException {
+		mabledev.click();
+		Thread.sleep(2000);
+		search.sendKeys(macaddr);
+		search.sendKeys(Keys.ENTER);
+		delete.click();
+		submit.click();
+		waitForWebElementToAppear(message);
+		System.out.println(message.getText() + " Gateway Deleted");
+		fade.click();
+
 	}
 
 	public void delbeac(String macaddr) throws InterruptedException {
@@ -216,7 +351,8 @@ public class DeviceManagement extends AbstractComponent {
 		Thread.sleep(2000);
 		submit.click();
 		Thread.sleep(2000);
-		System.out.println("Beacon Deleted");
+		waitForWebElementToAppear(message);
+		System.out.println(message.getText() + " Beacon Deleted");
 	}
 
 	public void assgnUser(String macaddr, int usr) throws InterruptedException {
@@ -231,7 +367,9 @@ public class DeviceManagement extends AbstractComponent {
 		selectUserindx1(usr);
 		seluserdrop1.click();
 		submit.click();
-		System.out.println("User Assigned");
+		waitForWebElementToAppear(message);
+		System.out.println(message.getText() + " User Assigned");
+		
 	}
 
 	public void unAssgnuser(String macaddr) throws InterruptedException {
@@ -242,6 +380,35 @@ public class DeviceManagement extends AbstractComponent {
 		edit.click();
 		x1.click();
 		submit.click();
-		System.out.println("User unAssigned");
+		waitForWebElementToAppear(message);
+		System.out.println(message.getText() + " User unAssigned");
+	}
+
+	public void addAlarmArea(String arname, int[] devs, int[] gws) throws InterruptedException {
+		
+		alarmarea.click();
+		Thread.sleep(1000);
+		addsub.click();
+		areaname.sendKeys(arname);
+		forbiddenChk.click();
+		assgnDevice(devs);
+		assgnGateway(gws);
+		submit.click();
+		waitForWebElementToAppear(message);
+		System.out.println(message.getText() + " Alarm Area Created");
+
+	}
+
+	public void delAlarmArea(String arname) throws InterruptedException {
+		alarmarea.click();
+		Thread.sleep(1000);
+		search.sendKeys(arname);
+		search.sendKeys(Keys.ENTER);
+		delete.click();
+		delsub.click();
+		waitForWebElementToclick(x);
+		x.click();
+		waitForWebElementToAppear(message);
+		System.out.println(message.getText() + " Alarm Area Deleted");
 	}
 }

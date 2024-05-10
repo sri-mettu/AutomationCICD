@@ -4,9 +4,9 @@
 	<listeners>
 		<listener class-name="srimettu.TestComponents.Listeners"/>
 	</listeners>
-  <test thread-count="5" name="StandaloneTest">
+  <test thread-count="5" name="deviceManagementTest">
     <classes>
-      <class name="srimettu.tests.StandAloneTest"/>
+      <class name="srimettu.tests.deviceManagementTest"/>
       
     </classes>
   </test> 
