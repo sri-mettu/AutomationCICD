@@ -1,145 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="11" passed="11" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-10T12:29:40 BST" name="Suite" finished-at="2024-05-10T12:31:44 BST" duration-ms="123259">
+  <suite started-at="2024-05-10T16:12:20 BST" name="Default suite" finished-at="2024-05-10T16:13:20 BST" duration-ms="60351">
     <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.TestNGTestRunner@7a3793c7]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-05-10T12:29:40 BST" name="deviceManagementTest" finished-at="2024-05-10T12:31:44 BST" duration-ms="123259">
-      <class name="srimettu.tests.deviceManagementTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:srimettu.tests.deviceManagementTest@424ebba3]" started-at="2024-05-10T12:29:40 BST" name="launchApplication" finished-at="2024-05-10T12:29:44 BST" duration-ms="3246" status="PASS">
+    <test started-at="2024-05-10T16:12:20 BST" name="Default test" finished-at="2024-05-10T16:13:20 BST" duration-ms="60351">
+      <class name="cucumber.TestNGTestRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:cucumber.TestNGTestRunner@7a3793c7]" started-at="2024-05-10T16:12:20 BST" name="setUpClass" finished-at="2024-05-10T16:12:21 BST" duration-ms="685" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@67328bcb]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="addAlarmArea()[pri:0, instance:srimettu.tests.deviceManagementTest@424ebba3]" started-at="2024-05-10T12:29:44 BST" name="addAlarmArea" finished-at="2024-05-10T12:29:49 BST" duration-ms="5450" status="PASS">
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.TestNGTestRunner@7a3793c7]" started-at="2024-05-10T16:12:21 BST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-10T16:12:29 BST" duration-ms="8387" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Beacon Alert Clear"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Clearing the Alert"]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addAlarmArea -->
-        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:srimettu.tests.deviceManagementTest@424ebba3]" started-at="2024-05-10T12:29:49 BST" name="quitBrowser" finished-at="2024-05-10T12:29:49 BST" duration-ms="336" status="PASS">
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.TestNGTestRunner@7a3793c7]" started-at="2024-05-10T16:12:29 BST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-10T16:12:38 BST" duration-ms="9172" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Maintenance Alert Clear"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Clearing the Alert"]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- quitBrowser -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:srimettu.tests.deviceManagementTest@424ebba3]" started-at="2024-05-10T12:29:49 BST" name="launchApplication" finished-at="2024-05-10T12:29:52 BST" duration-ms="2607" status="PASS">
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.TestNGTestRunner@7a3793c7]" started-at="2024-05-10T16:12:38 BST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-10T16:12:42 BST" duration-ms="3830" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Invalid Login check"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login Check"]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="addBeacon()[pri:0, instance:srimettu.tests.deviceManagementTest@424ebba3]" started-at="2024-05-10T12:29:52 BST" name="addBeacon" finished-at="2024-05-10T12:29:58 BST" duration-ms="6112" status="PASS">
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.TestNGTestRunner@7a3793c7]" started-at="2024-05-10T16:12:42 BST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-10T16:13:11 BST" duration-ms="29208" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Loading the devices from Hub"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Device Management Page"]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addBeacon -->
-        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:srimettu.tests.deviceManagementTest@424ebba3]" started-at="2024-05-10T12:29:58 BST" name="quitBrowser" finished-at="2024-05-10T12:29:58 BST" duration-ms="303" status="PASS">
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.TestNGTestRunner@7a3793c7]" started-at="2024-05-10T16:13:11 BST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-10T16:13:20 BST" duration-ms="8894" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Edit Device"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Device Management Page"]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- quitBrowser -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:srimettu.tests.deviceManagementTest@424ebba3]" started-at="2024-05-10T12:29:58 BST" name="launchApplication" finished-at="2024-05-10T12:30:01 BST" duration-ms="2745" status="PASS">
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:cucumber.TestNGTestRunner@7a3793c7]" started-at="2024-05-10T16:13:20 BST" name="tearDownClass" finished-at="2024-05-10T16:13:20 BST" duration-ms="119" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="addGateway()[pri:0, instance:srimettu.tests.deviceManagementTest@424ebba3]" started-at="2024-05-10T12:30:01 BST" name="addGateway" finished-at="2024-05-10T12:30:07 BST" duration-ms="6258" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addGateway -->
-        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:srimettu.tests.deviceManagementTest@424ebba3]" started-at="2024-05-10T12:30:07 BST" name="quitBrowser" finished-at="2024-05-10T12:30:08 BST" duration-ms="284" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quitBrowser -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:srimettu.tests.deviceManagementTest@424ebba3]" started-at="2024-05-10T12:30:08 BST" name="launchApplication" finished-at="2024-05-10T12:30:10 BST" duration-ms="2604" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="assignUser()[pri:0, instance:srimettu.tests.deviceManagementTest@424ebba3]" started-at="2024-05-10T12:30:10 BST" name="assignUser" finished-at="2024-05-10T12:30:18 BST" duration-ms="7252" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- assignUser -->
-        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:srimettu.tests.deviceManagementTest@424ebba3]" started-at="2024-05-10T12:30:18 BST" name="quitBrowser" finished-at="2024-05-10T12:30:18 BST" duration-ms="326" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quitBrowser -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:srimettu.tests.deviceManagementTest@424ebba3]" started-at="2024-05-10T12:30:18 BST" name="launchApplication" finished-at="2024-05-10T12:30:21 BST" duration-ms="2594" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="delAlarmArea()[pri:0, instance:srimettu.tests.deviceManagementTest@424ebba3]" started-at="2024-05-10T12:30:21 BST" name="delAlarmArea" finished-at="2024-05-10T12:30:27 BST" duration-ms="6138" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- delAlarmArea -->
-        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:srimettu.tests.deviceManagementTest@424ebba3]" started-at="2024-05-10T12:30:27 BST" name="quitBrowser" finished-at="2024-05-10T12:30:27 BST" duration-ms="302" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quitBrowser -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:srimettu.tests.deviceManagementTest@424ebba3]" started-at="2024-05-10T12:30:27 BST" name="launchApplication" finished-at="2024-05-10T12:30:30 BST" duration-ms="2573" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="deviceEdit()[pri:0, instance:srimettu.tests.deviceManagementTest@424ebba3]" started-at="2024-05-10T12:30:30 BST" name="deviceEdit" finished-at="2024-05-10T12:30:35 BST" duration-ms="5955" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deviceEdit -->
-        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:srimettu.tests.deviceManagementTest@424ebba3]" started-at="2024-05-10T12:30:35 BST" name="quitBrowser" finished-at="2024-05-10T12:30:36 BST" duration-ms="294" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quitBrowser -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:srimettu.tests.deviceManagementTest@424ebba3]" started-at="2024-05-10T12:30:36 BST" name="launchApplication" finished-at="2024-05-10T12:30:38 BST" duration-ms="2659" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="editGateway()[pri:0, instance:srimettu.tests.deviceManagementTest@424ebba3]" started-at="2024-05-10T12:30:38 BST" name="editGateway" finished-at="2024-05-10T12:30:45 BST" duration-ms="6463" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- editGateway -->
-        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:srimettu.tests.deviceManagementTest@424ebba3]" started-at="2024-05-10T12:30:45 BST" name="quitBrowser" finished-at="2024-05-10T12:30:45 BST" duration-ms="314" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quitBrowser -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:srimettu.tests.deviceManagementTest@424ebba3]" started-at="2024-05-10T12:30:45 BST" name="launchApplication" finished-at="2024-05-10T12:30:48 BST" duration-ms="2579" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="loadDevice()[pri:0, instance:srimettu.tests.deviceManagementTest@424ebba3]" started-at="2024-05-10T12:30:48 BST" name="loadDevice" finished-at="2024-05-10T12:31:14 BST" duration-ms="26248" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loadDevice -->
-        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:srimettu.tests.deviceManagementTest@424ebba3]" started-at="2024-05-10T12:31:14 BST" name="quitBrowser" finished-at="2024-05-10T12:31:14 BST" duration-ms="327" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quitBrowser -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:srimettu.tests.deviceManagementTest@424ebba3]" started-at="2024-05-10T12:31:14 BST" name="launchApplication" finished-at="2024-05-10T12:31:17 BST" duration-ms="2586" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="unAssignUser()[pri:0, instance:srimettu.tests.deviceManagementTest@424ebba3]" started-at="2024-05-10T12:31:17 BST" name="unAssignUser" finished-at="2024-05-10T12:31:22 BST" duration-ms="5114" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- unAssignUser -->
-        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:srimettu.tests.deviceManagementTest@424ebba3]" started-at="2024-05-10T12:31:22 BST" name="quitBrowser" finished-at="2024-05-10T12:31:22 BST" duration-ms="285" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quitBrowser -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:srimettu.tests.deviceManagementTest@424ebba3]" started-at="2024-05-10T12:31:22 BST" name="launchApplication" finished-at="2024-05-10T12:31:25 BST" duration-ms="2598" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="DeleteGateway()[pri:0, instance:srimettu.tests.deviceManagementTest@424ebba3]" started-at="2024-05-10T12:31:25 BST" name="DeleteGateway" finished-at="2024-05-10T12:31:32 BST" depends-on-methods="srimettu.tests.deviceManagementTest.addGateway" duration-ms="6539" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- DeleteGateway -->
-        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:srimettu.tests.deviceManagementTest@424ebba3]" started-at="2024-05-10T12:31:32 BST" name="quitBrowser" finished-at="2024-05-10T12:31:32 BST" duration-ms="304" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quitBrowser -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:srimettu.tests.deviceManagementTest@424ebba3]" started-at="2024-05-10T12:31:32 BST" name="launchApplication" finished-at="2024-05-10T12:31:34 BST" duration-ms="2614" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="delBeacon()[pri:0, instance:srimettu.tests.deviceManagementTest@424ebba3]" started-at="2024-05-10T12:31:34 BST" name="delBeacon" finished-at="2024-05-10T12:31:43 BST" depends-on-methods="srimettu.tests.deviceManagementTest.unAssignUser" duration-ms="8840" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- delBeacon -->
-        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:srimettu.tests.deviceManagementTest@424ebba3]" started-at="2024-05-10T12:31:43 BST" name="quitBrowser" finished-at="2024-05-10T12:31:44 BST" duration-ms="301" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quitBrowser -->
-      </class> <!-- srimettu.tests.deviceManagementTest -->
-    </test> <!-- deviceManagementTest -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- cucumber.TestNGTestRunner -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

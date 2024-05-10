@@ -133,7 +133,7 @@ public class DeviceManagement extends AbstractComponent {
 		selectAreaIndx(ar);
 		seluserradio.click();
 		selectUserIndx(usr);
-		multiCaretuser.click();
+		multiCaretuser.click();		
 		submit.click();
 		waitForWebElementToAppear(message);
 		System.out.println(message.getText()+" Device Edited");
