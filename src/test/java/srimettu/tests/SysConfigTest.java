@@ -11,7 +11,7 @@ import srimettu.pageobjects.UserManagement;
 
 public class SysConfigTest extends baseTest {
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void ekIP() throws IOException, InterruptedException {
 		landingpage.selectLang();
 		Dashboard dashboard = landingpage.loginApplication();
@@ -23,7 +23,7 @@ public class SysConfigTest extends baseTest {
 
 	}
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void hubIP() throws IOException, InterruptedException {
 		landingpage.selectLang();
 		Dashboard dashboard = landingpage.loginApplication();
