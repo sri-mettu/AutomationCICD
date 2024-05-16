@@ -46,6 +46,8 @@ public class Dashboard extends AbstractComponent {
 	@FindBy(id = "mat-button-toggle-2-button")
 	public
 	WebElement alarmHistory;
+	@FindBy(css = "div[role='alert']")
+	public WebElement message;
 
 
 	public String getPageName() {
@@ -59,9 +61,8 @@ public class Dashboard extends AbstractComponent {
 		maintenanceAlarm.click();
 		MtextBox.sendKeys(reason);
 		mClear.click();
-		System.out.println("Maintenance Alarm Cleared");
-		
-		
+		waitForWebElementToAppear(message);
+		System.out.println(message.getText()+" Maintenance Alarm Cleared");		
 
 	}
 
@@ -71,7 +72,8 @@ public class Dashboard extends AbstractComponent {
 		reasonBox.sendKeys(reason);		
 		bSubmit.click();
 		bclose.click();
-		System.out.println("Beacon Alert Cleared");
+		waitForWebElementToAppear(message);
+		System.out.println(message.getText()+" Beacon Alert Cleared");
 
 	}
 	public void logoutApplication() throws InterruptedException {

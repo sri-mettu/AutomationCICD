@@ -25,6 +25,19 @@ Given Open the browser and enter the url
     Then Logout of the Application
     Examples: 
       | name  | password | id			|ar|usr|
-      | s2    |     s2   |1033333	|2 | 2 |
+      | s2    |     s2   |0012739	|0 | 2 |
+      
+    
+     @tag2
+  Scenario: Add Beacon 
+    Given Logged in with username <name> and password <password>
+    And Click on the menubutton   
+    And Click on device managemnet 
+    And Add the beacon devicename <devicename> and MacAddress <mcaddr>    
+    Then Logout of the Application
+    Examples: 
+      | name  | password | devicename	|mcaddr       |
+      | s2    |     s2   |AutoBeac	  |Beac01234567 |
+    
 
  
