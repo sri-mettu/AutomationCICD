@@ -21,7 +21,7 @@ public class deviceManagementTest extends baseTest {
 		deviceManagement.devicemanag.click();
 		landingpage.menubutton();
 		deviceManagement.search("1033333");
-		deviceManagement.editDev(2,0);
+		deviceManagement.editDev1(2,2);
 		dashboard.logoutApplication();
 	}
 	/*

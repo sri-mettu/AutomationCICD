@@ -82,6 +82,7 @@ public class StepDefenitionImpl extends baseTest{
 	@Then ("^Edit device with area (.+) and user (.+)$")
 	public void Edit_device(int ar, int usr) throws InterruptedException {
 		DeviceManagement devicemanagement =new DeviceManagement(driver);
+		
 		devicemanagement.editDev(ar, usr);
 	}
 	@And ("^Add the beacon devicename (.+) and MacAddress (.+)$")
