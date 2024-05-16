@@ -113,8 +113,15 @@ public class DeviceManagement extends AbstractComponent {
 	WebElement fade;
 	@FindBy(xpath="//div[@class='ng-star-inserted selected']")
 	WebElement usrassigned;
-	@FindBy(xpath="(//span[@class='ng-star-inserted'])[1]")
+	@FindBy(xpath="(//div[@class='selected ng-star-inserted'])[2]")
 	WebElement usersel;
+	@FindBy(xpath = "//div[@class='selected-item ng-star-inserted']")
+	WebElement dropdownuserassigned;
+	@FindBy(xpath="(//span[@class='ng-star-inserted'])[1]")
+	WebElement dropdownusersel;
+	@FindBy(xpath="(//span[@class='dropdown-btn'])[2]")
+	WebElement dropdown;
+	
 	
 
 	public void devLoad() throws IOException, InterruptedException {
@@ -133,20 +140,46 @@ public class DeviceManagement extends AbstractComponent {
 		System.out.println(message.getText());
 
 	}
+	public void selecteduser() {
+		seluserdrop.click();
+		String userassigned = usersel.getText();
+		System.out.println(userassigned+" user assigned");
+	}
 	
 	public void editDev(int ar, int usr) throws InterruptedException {
 		edit.click();
 		selectAreaIndx(ar);
 		seluserradio.click();		
-		selectUserIndx(usr);				
-		x1.click();
-		selectUserIndx(usr);		
-		//waitForWebElementToAppear(usrassigned);
+		String droptxt= dropdown.getText();		
+		String dropusrsel = dropdownusersel.getText();			
+		if (droptxt.equals(dropusrsel)) {selectUserIndx(usr);}
+		String dropuserassignd = dropdownuserassigned.getText();		
+		if(droptxt.equals(dropuserassignd)) {		
+			x1.click();			
+			selectUserIndx(usr);}
 		System.out.println(usrassigned.getText()+" user selected");
 		seluserdrop.click();
-		submit.click();			
+		submit.click();
 		waitForWebElementToAppear(message);		
 		System.out.println(message.getText()+" Device Edited");
+		
+		}	
+	public void editDev1(int ar, int usr) throws InterruptedException {
+		edit.click();
+		selectAreaIndx(ar);
+		seluserradio.click();				
+		if (dropdown.getText().equals(dropdownusersel.getText()))
+		{
+			selectUserIndx(usr);
+			}				
+		if(dropdown.getText().equals(dropdownuserassigned.getText())) {		
+			x1.click();			
+			selectUserIndx(usr);}
+		System.out.println(usrassigned.getText()+" user selected");
+		seluserdrop.click();
+		submit.click();
+		waitForWebElementToAppear(message);		
+		System.out.println(message.getText()+" Device Edited");		
 		}	
 
 	public void selectArea(String ar) {
@@ -241,7 +274,10 @@ public class DeviceManagement extends AbstractComponent {
 			if (usr >= 0 && usr < users.size()) {
 			WebElement user = users.get(usr);			
 			user.click();			
-		}			
+		}	
+			else {
+				System.out.println("Invalid index: " + usr);
+			}
 					
 	}
 
