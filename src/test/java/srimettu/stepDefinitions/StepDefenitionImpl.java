@@ -84,4 +84,10 @@ public class StepDefenitionImpl extends baseTest{
 		DeviceManagement devicemanagement =new DeviceManagement(driver);
 		devicemanagement.editDev(ar, usr);
 	}
+	@And ("^Add the beacon devicename (.+) and MacAddress (.+)$")
+	public void Add_Beacon(String devicename, String mcaddr) throws InterruptedException {
+		DeviceManagement devicemanagement =new DeviceManagement(driver);
+		devicemanagement.menubutton();
+		devicemanagement.beaconAdd(devicename, mcaddr);
+	}
 }

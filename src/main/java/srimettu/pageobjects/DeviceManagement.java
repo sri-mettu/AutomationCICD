@@ -2,6 +2,7 @@ package srimettu.pageobjects;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -110,6 +111,11 @@ public class DeviceManagement extends AbstractComponent {
 	WebElement rssi;
 	@FindBy(css = "modal-container[class*='fade']")
 	WebElement fade;
+	@FindBy(xpath="//div[@class='ng-star-inserted selected']")
+	WebElement usrassigned;
+	@FindBy(xpath="(//span[@class='ng-star-inserted'])[1]")
+	WebElement usersel;
+	
 
 	public void devLoad() throws IOException, InterruptedException {
 		SystemConfig config = new SystemConfig(driver);
@@ -127,18 +133,21 @@ public class DeviceManagement extends AbstractComponent {
 		System.out.println(message.getText());
 
 	}
-
+	
 	public void editDev(int ar, int usr) throws InterruptedException {
 		edit.click();
 		selectAreaIndx(ar);
-		seluserradio.click();
-		selectUserIndx(usr);
-		multiCaretuser.click();		
-		submit.click();
-		waitForWebElementToAppear(message);
+		seluserradio.click();		
+		selectUserIndx(usr);				
+		x1.click();
+		selectUserIndx(usr);		
+		//waitForWebElementToAppear(usrassigned);
+		System.out.println(usrassigned.getText()+" user selected");
+		seluserdrop.click();
+		submit.click();			
+		waitForWebElementToAppear(message);		
 		System.out.println(message.getText()+" Device Edited");
-
-	}
+		}	
 
 	public void selectArea(String ar) {
 		selarea.click();
@@ -151,15 +160,7 @@ public class DeviceManagement extends AbstractComponent {
 		}
 	}
 
-	public void selectAreaIndx(int ar) {
-		selarea.click();
-		List<WebElement> areas = driver.findElements(By.xpath("(//div/ul[2])[1]/li"));
-		if (ar >= 0 && ar < areas.size()) {
-			WebElement area = areas.get(ar);
-			area.click();
-
-		}
-	}
+	
 
 	public void selectAreagw(int ar) {
 		selareagw.click();
@@ -222,19 +223,31 @@ public class DeviceManagement extends AbstractComponent {
 			}
 		}
 	}
-
-	public void selectUserIndx(int usr) {
-		seluserdrop.click();
-		List<WebElement> users = driver.findElements(By.xpath("(//div/ul[2])[2]/li"));
-		if (usr >= 0 && usr < users.size()) {
-			WebElement user = users.get(usr);
-			user.click();
-
+	public void selectAreaIndx(int ar) throws InterruptedException {
+		selarea.click();	
+		Thread.sleep(2000);
+		List<WebElement> areas = driver.findElements(By.xpath("(//div/ul[2])[1]/li"));
+		if (ar >= 0 && ar < areas.size()) {
+			WebElement area = areas.get(ar);
+			area.click();		
 		}
+		System.out.println(selarea.getText()+" area is Selected");
+	}
+	public void selectUserIndx(int usr) throws InterruptedException {		
+		seluserdrop.click();
+		
+		List<WebElement> users = driver.findElements(By.xpath("(//div/ul[2])[2]/li"));
+		
+			if (usr >= 0 && usr < users.size()) {
+			WebElement user = users.get(usr);			
+			user.click();			
+		}			
+					
 	}
 
 	public void selectUser1(String usr) {
 		seluserdrop1.click();
+
 		List<WebElement> users = driver.findElements(By.xpath("//div/ul[2]/li"));
 		for (WebElement user : users) {
 			if (user.getText().equalsIgnoreCase(usr)) {
@@ -345,8 +358,9 @@ public class DeviceManagement extends AbstractComponent {
 	public void delbeac(String macaddr) throws InterruptedException {
 		mabledev.click();
 		Thread.sleep(1000);
-		search.sendKeys(macaddr);
-		search.sendKeys(Keys.ENTER);
+		search(macaddr);
+		//search.sendKeys(macaddr);
+		//search.sendKeys(Keys.ENTER);
 		delete.click();
 		Thread.sleep(2000);
 		submit.click();
@@ -359,8 +373,9 @@ public class DeviceManagement extends AbstractComponent {
 
 		mabledev.click();
 		Thread.sleep(1000);
-		search.sendKeys(macaddr);
-		search.sendKeys(Keys.ENTER);
+		search(macaddr);
+		//search.sendKeys(macaddr);
+		//search.sendKeys(Keys.ENTER);
 		edit.click();
 		selusrradio1.click();
 		Thread.sleep(2000);

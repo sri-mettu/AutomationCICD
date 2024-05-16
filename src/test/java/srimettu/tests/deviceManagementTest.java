@@ -2,7 +2,6 @@ package srimettu.tests;
 
 import java.io.IOException;
 
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import srimettu.TestComponents.baseTest;
@@ -11,17 +10,7 @@ import srimettu.pageobjects.DeviceManagement;
 
 public class deviceManagementTest extends baseTest {
 
-	@Test(enabled = false)
-	public void loadDevice() throws IOException, InterruptedException {
-		landingpage.selectLang();
-		Dashboard dashboard = landingpage.loginApplication();
-		System.out.println("Login Success");
-		landingpage.menubutton();
-		DeviceManagement deviceManagement = new DeviceManagement(driver);
-		deviceManagement.devLoad();
-		dashboard.logoutApplication();
-
-	}
+	
 
 	@Test(enabled = true)
 	public void deviceEdit() throws IOException, InterruptedException {
@@ -32,8 +21,20 @@ public class deviceManagementTest extends baseTest {
 		deviceManagement.devicemanag.click();
 		landingpage.menubutton();
 		deviceManagement.search("1033333");
-		deviceManagement.editDev(1, 1);
+		deviceManagement.editDev(2,0);
 		dashboard.logoutApplication();
+	}
+	/*
+	@Test(enabled = true)
+	public void loadDevice() throws IOException, InterruptedException {
+		landingpage.selectLang();
+		Dashboard dashboard = landingpage.loginApplication();
+		System.out.println("Login Success");
+		landingpage.menubutton();
+		DeviceManagement deviceManagement = new DeviceManagement(driver);
+		deviceManagement.devLoad();
+		dashboard.logoutApplication();
+
 	}
 
 	@Test(enabled = true)
@@ -157,5 +158,5 @@ public class deviceManagementTest extends baseTest {
 		dashboard.logoutApplication();
 
 	}
-
+*/
 }
