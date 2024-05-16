@@ -179,8 +179,7 @@
 							<version>3.2.5</version>
 							<configuration>
 								<includes>
-									<include>**/TestNGTestRunner.java</include>
-									<include>**/TestNGRunner.java</include>
+									<include>**/CucumberTestRunner.java</include>									
 									 </includes>
 							</configuration>
 						</plugin>
