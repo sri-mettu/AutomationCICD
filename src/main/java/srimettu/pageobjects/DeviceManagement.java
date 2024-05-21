@@ -1,6 +1,7 @@
 package srimettu.pageobjects;
 
 import java.io.IOException;
+import java.time.Duration;
 import java.util.List;
 import java.util.NoSuchElementException;
 
@@ -10,6 +11,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import srimettu.AbstractComponents.AbstractComponent;
 
@@ -43,7 +46,7 @@ public class DeviceManagement extends AbstractComponent {
 	WebElement close;
 	@FindBy(css = "button[class='close'] span")
 	WebElement x;
-	@FindBy(xpath = "//a[text()='x']")
+	@FindBy(css = "a[class='ng-star-inserted']")
 	WebElement x1;
 	@FindBy(css = "div[aria-label*='Finished Loading']")
 	public WebElement loadsuccess;
@@ -67,7 +70,7 @@ public class DeviceManagement extends AbstractComponent {
 	WebElement seluserradio;
 	@FindBy(css = "span[class='mat-radio-inner-circle']")
 	WebElement selusrradio1;
-	@FindBy(xpath = "(//input[@class='mat-radio-input'])[1]")
+	@FindBy(xpath = "(//span[@class='mat-radio-inner-circle'])[1]")
 	WebElement selstaffradio;
 	@FindBy(xpath = "(//div/span)[3]")
 	WebElement selstaffdrop;
@@ -119,8 +122,16 @@ public class DeviceManagement extends AbstractComponent {
 	WebElement dropdownuserassigned;
 	@FindBy(xpath="(//span[@class='ng-star-inserted'])[1]")
 	WebElement dropdownusersel;
+	@FindBy(xpath="(//span[@class='ng-star-inserted'])[2]")
+	WebElement dropdownstaffsel;
 	@FindBy(xpath="(//span[@class='dropdown-btn'])[2]")
 	WebElement dropdown;
+	@FindBy(xpath="(//span[@class='dropdown-btn'])[3]")
+	WebElement dropdownstff;
+	@FindBy(xpath="(//div/ul[2])[3]/li/input[@type='checkbox']")
+	WebElement staffinput;
+	@FindBy(xpath="(//div/ul[2])[3]/li")
+	WebElement staffmulti;
 	
 	
 
@@ -170,16 +181,50 @@ public class DeviceManagement extends AbstractComponent {
 		seluserradio.click();				
 		if (dropdown.getText().equals(dropdownusersel.getText()))
 		{
-			selectUserIndx(usr);
+			selectUserIndx(usr);System.out.println("step1");
 			}				
 		if(dropdown.getText().equals(dropdownuserassigned.getText())) {		
 			x1.click();			
-			selectUserIndx(usr);}
+			selectUserIndx(usr);System.out.println("step2");}
 		System.out.println(usrassigned.getText()+" user selected");
 		seluserdrop.click();
 		submit.click();
 		waitForWebElementToAppear(message);		
 		System.out.println(message.getText()+" Device Edited");		
+		}	
+	public void editDevstaff(int ar, int stff) throws InterruptedException {
+		edit.click();
+		selectAreaIndx(ar);
+		selstaffradio.click();		
+		if (dropdownstff.getText().equals(dropdownstaffsel.getText()))			
+		{selectStaffIndx(stff);
+		System.out.println("step1");}
+		if(dropdownstff.getText().equals(dropdownuserassigned.getText())) {		
+			x1.click();				
+			selectStaffIndx(stff);
+			System.out.println("step2");}		
+		System.out.println(usrassigned.getText()+" staff selected");
+		selstaffdrop.click();
+		
+		submit.click();
+		waitForWebElementToAppear(message);		
+		System.out.println(message.getText()+" Device Edited");	
+		}	
+	
+	
+	public void editDevstaff1(int ar, int stff) throws InterruptedException {
+		edit.click();
+		selectAreaIndx(ar);
+		selstaffradio.click();	
+		selstaffdrop.click();	
+		if (staffinput.isSelected()) {x1.click();selstaffdrop.click();selectStaffIndx(stff);}
+		if (!staffinput.isSelected()) {selectStaffIndx(stff);}
+				
+		System.out.println(usrassigned.getText()+" staff selected");
+		selstaffdrop.click();
+		submit.click();
+		waitForWebElementToAppear(message);		
+		System.out.println(message.getText()+" Device Edited");	
 		}	
 
 	public void selectArea(String ar) {
@@ -236,15 +281,7 @@ public class DeviceManagement extends AbstractComponent {
 		}
 	}
 
-	public void selectStaffIndx(int stff) {
-		selstaffdrop.click();
-		List<WebElement> staffs = driver.findElements(By.xpath("(//div/ul[2])[3]/li"));
-		if (stff >= 0 && stff < staffs.size()) {
-			WebElement staff = staffs.get(stff);
-			staff.click();
-
-		}
-	}
+	
 
 	public void selectUser(String usr) {
 		seluserdrop.click();
@@ -278,7 +315,17 @@ public class DeviceManagement extends AbstractComponent {
 			else {
 				System.out.println("Invalid index: " + usr);
 			}
-					
+				}
+	public void selectStaffIndx(int stff) {
+		//selstaffdrop.click();
+		List<WebElement> staffs = driver.findElements(By.xpath("(//div/ul[2])[3]/li"));
+		if (stff >= 0 && stff < staffs.size()) {
+			WebElement staff = staffs.get(stff);
+			staff.click();
+		}
+		else {
+			System.out.println("Invalid index: " + stff);
+		}
 	}
 
 	public void selectUser1(String usr) {
