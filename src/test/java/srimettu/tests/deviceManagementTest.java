@@ -20,11 +20,24 @@ public class deviceManagementTest extends baseTest {
 		DeviceManagement deviceManagement = new DeviceManagement(driver);
 		deviceManagement.devicemanag.click();
 		landingpage.menubutton();
-		deviceManagement.search("1033333");
-		deviceManagement.editDev1(2,2);
+		deviceManagement.search("1049283");
+		deviceManagement.editDev(1,2);
 		dashboard.logoutApplication();
 	}
-	/*
+	@Test(enabled = false)
+	public void deviceEditstaff() throws IOException, InterruptedException {
+		landingpage.selectLang();
+		Dashboard dashboard = landingpage.loginApplication();
+		landingpage.menubutton();
+		DeviceManagement deviceManagement = new DeviceManagement(driver);
+		deviceManagement.devicemanag.click();
+		landingpage.menubutton();
+		deviceManagement.search("1049179");
+		deviceManagement.editDevstaff1(1,0);
+		dashboard.logoutApplication();
+	}
+	
+	
 	@Test(enabled = true)
 	public void loadDevice() throws IOException, InterruptedException {
 		landingpage.selectLang();
@@ -158,5 +171,5 @@ public class deviceManagementTest extends baseTest {
 		dashboard.logoutApplication();
 
 	}
-*/
+
 }

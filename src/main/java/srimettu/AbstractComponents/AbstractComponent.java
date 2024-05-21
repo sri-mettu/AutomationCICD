@@ -48,6 +48,8 @@ public class AbstractComponent {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.elementToBeClickable(findBy));
 	}
+	
+	
 
 	public void maxbrowser() {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
