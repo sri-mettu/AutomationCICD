@@ -5,9 +5,10 @@
     <classes>
       <class name="srimettu.tests.SysBackup">
         <methods>
-          <include name="uploadDB"/>
+          <include name="newBackup"/>
           <include name="quitBrowser"/>
           <include name="launchApplication"/>
+          <include name="deleteBackup"/>
         </methods>
       </class> <!-- srimettu.tests.SysBackup -->
     </classes>
