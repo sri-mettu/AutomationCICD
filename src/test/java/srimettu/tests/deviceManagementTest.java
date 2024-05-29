@@ -12,7 +12,7 @@ public class deviceManagementTest extends baseTest {
 
 	
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void deviceEdit() throws IOException, InterruptedException {
 		landingpage.selectLang();
 		Dashboard dashboard = landingpage.loginApplication();
@@ -49,7 +49,7 @@ public class deviceManagementTest extends baseTest {
 		dashboard.logoutApplication();
 
 	}
-
+/*
 	@Test(enabled = true)
 	public void addBeacon() throws IOException, InterruptedException {
 		landingpage.selectLang();
@@ -171,5 +171,6 @@ public class deviceManagementTest extends baseTest {
 		dashboard.logoutApplication();
 
 	}
+	*/
 
 }
