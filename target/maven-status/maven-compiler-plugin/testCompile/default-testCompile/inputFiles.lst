@@ -1,4 +1,4 @@
-C:\Users\smettu\CI-CD\src\test\java\cucumber\TestNGTestRunner.java
+C:\Users\smettu\CI-CD\src\test\java\cucumber\CucumberTestRunner.java
 C:\Users\smettu\CI-CD\src\test\java\srimettu\data\dataReader.java
 C:\Users\smettu\CI-CD\src\test\java\srimettu\stepDefinitions\StepDefenitionImpl.java
 C:\Users\smettu\CI-CD\src\test\java\srimettu\TestComponents\baseTest.java
@@ -9,5 +9,7 @@ C:\Users\smettu\CI-CD\src\test\java\srimettu\tests\DataProviderEValidation.java
 C:\Users\smettu\CI-CD\src\test\java\srimettu\tests\deviceManagementTest.java
 C:\Users\smettu\CI-CD\src\test\java\srimettu\tests\EscortManagementTest.java
 C:\Users\smettu\CI-CD\src\test\java\srimettu\tests\StandAloneTest.java
+C:\Users\smettu\CI-CD\src\test\java\srimettu\tests\SysBackup.java
+C:\Users\smettu\CI-CD\src\test\java\srimettu\tests\SysConfigTest.java
 C:\Users\smettu\CI-CD\src\test\java\srimettu\tests\TestNGRunner.java
 C:\Users\smettu\CI-CD\src\test\java\srimettu\tests\UserManagementTest.java
