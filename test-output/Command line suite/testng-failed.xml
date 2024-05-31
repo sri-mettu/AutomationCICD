@@ -5,8 +5,10 @@
     <classes>
       <class name="srimettu.tests.deviceManagementTest">
         <methods>
-          <include name="deviceEdit"/>
+          <include name="editGateway"/>
           <include name="quitBrowser"/>
+          <include name="delBeacon"/>
+          <include name="unAssignUser"/>
           <include name="launchApplication"/>
         </methods>
       </class> <!-- srimettu.tests.deviceManagementTest -->
