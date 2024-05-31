@@ -25,7 +25,7 @@ Given Open the browser and enter the url
     Then Logout of the Application
     Examples: 
       | name  | password | id			|ar|usr|
-      | s2    |     s2   |0012739	|0 | 2 |
+      | s2    |     s2   |1049179	|0 | 2 |
       
     
      @tag2

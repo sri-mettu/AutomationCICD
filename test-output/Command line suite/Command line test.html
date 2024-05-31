@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Command line test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>10/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>18/2/1</td>
 </tr><tr>
-<td>Started on:</td><td>Wed May 01 14:11:58 BST 2024</td>
+<td>Started on:</td><td>Fri May 31 12:50:40 BST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>126 seconds (126785 ms)</td>
+<tr><td>Total time:</td><td>303 seconds (303400 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,16 +76,17 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='srimettu.tests.deviceManagementTest.deviceEdit()'><b>deviceEdit</b><br>Test class: srimettu.tests.deviceManagementTest</td>
-<td><div><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=124.0.6367.78)
-Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
+<td title='srimettu.tests.deviceManagementTest.editGateway()'><b>editGateway</b><br>Test class: srimettu.tests.deviceManagementTest</td>
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
+  (Session info: chrome=125.0.6422.113)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b80b3119eb49089a7fae6c572e1d800b, findElement {using=id, value=appSidebarTogglerv}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.78, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\smettu\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59434}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59434/devtoo..., se:cdpVersion: 124.0.6367.78, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b80b3119eb49089a7fae6c572e1d800b
+Command: [3e3dea1f42f45cb002601ae5919da197, clickElement {id=f.3C657D332F9107839C2D52BBA9C07722.d.B89D9B74E14DE64C13DB57D78BD300EE.e.88}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.113, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: C:\Users\smettu\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61056}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61056/devtoo..., se:cdpVersion: 125.0.6422.113, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (3e3dea1f42f45cb002601ae5919da197)] -&gt; xpath: (//div/ul[2])[2]/li]
+Session ID: 3e3dea1f42f45cb002601ae5919da197
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -93,34 +94,24 @@ Session ID: b80b3119eb49089a7fae6c572e1d800b
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy10.toString(Unknown Source)
-	at java.base/java.lang.StringConcatHelper.stringOf(StringConcatHelper.java:467)
-	at java.base/java.lang.StringConcatHelper.simpleConcat(StringConcatHelper.java:422)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.toString(ExpectedConditions.java:295)
-	at java.base/java.lang.StringConcatHelper.stringOf(StringConcatHelper.java:467)
-	at java.base/java.lang.StringConcatHelper.simpleConcat(StringConcatHelper.java:422)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:225)
-	at srimettu.AbstractComponents.AbstractComponent.waitForWebElementToAppear(AbstractComponent.java:41)
-	at srimettu.AbstractComponents.AbstractComponent.menubutton(AbstractComponent.java:71)
-	at srimettu.tests.deviceManagementTest.deviceEdit(deviceManagementTest.java:28)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at srimettu.pageobjects.DeviceManagement.selectHubgw(DeviceManagement.java:258)
+	at srimettu.pageobjects.DeviceManagement.gwEdit(DeviceManagement.java:421)
+	at srimettu.tests.deviceManagementTest.editGateway(deviceManagementTest.java:128)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at srimettu.tests.TestNGRunner.main(TestNGRunner.java:18)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace710144533", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace710144533'><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=124.0.6367.78)
-Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2012011563", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2012011563'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
+  (Session info: chrome=125.0.6422.113)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b80b3119eb49089a7fae6c572e1d800b, findElement {using=id, value=appSidebarTogglerv}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.78, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\smettu\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59434}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59434/devtoo..., se:cdpVersion: 124.0.6367.78, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b80b3119eb49089a7fae6c572e1d800b
+Command: [3e3dea1f42f45cb002601ae5919da197, clickElement {id=f.3C657D332F9107839C2D52BBA9C07722.d.B89D9B74E14DE64C13DB57D78BD300EE.e.88}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.113, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: C:\Users\smettu\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61056}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61056/devtoo..., se:cdpVersion: 125.0.6422.113, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (3e3dea1f42f45cb002601ae5919da197)] -&gt; xpath: (//div/ul[2])[2]/li]
+Session ID: 3e3dea1f42f45cb002601ae5919da197
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -131,22 +122,11 @@ Session ID: b80b3119eb49089a7fae6c572e1d800b
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy10.toString(Unknown Source)
-	at java.base/java.lang.StringConcatHelper.stringOf(StringConcatHelper.java:467)
-	at java.base/java.lang.StringConcatHelper.simpleConcat(StringConcatHelper.java:422)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.toString(ExpectedConditions.java:295)
-	at java.base/java.lang.StringConcatHelper.stringOf(StringConcatHelper.java:467)
-	at java.base/java.lang.StringConcatHelper.simpleConcat(StringConcatHelper.java:422)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:225)
-	at srimettu.AbstractComponents.AbstractComponent.waitForWebElementToAppear(AbstractComponent.java:41)
-	at srimettu.AbstractComponents.AbstractComponent.menubutton(AbstractComponent.java:71)
-	at srimettu.tests.deviceManagementTest.deviceEdit(deviceManagementTest.java:28)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at srimettu.pageobjects.DeviceManagement.selectHubgw(DeviceManagement.java:258)
+	at srimettu.pageobjects.DeviceManagement.gwEdit(DeviceManagement.java:421)
+	at srimettu.tests.deviceManagementTest.editGateway(deviceManagementTest.java:128)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -172,8 +152,93 @@ Session ID: b80b3119eb49089a7fae6c572e1d800b
 	at org.testng.TestNG.run(TestNG.java:1101)
 	at srimettu.tests.TestNGRunner.main(TestNGRunner.java:18)
 </pre></div></td>
-<td>60</td>
-<td>srimettu.tests.deviceManagementTest@6ab7a896</td></tr>
+<td>3</td>
+<td>srimettu.tests.deviceManagementTest@16e7dcfd</td></tr>
+<tr>
+<td title='srimettu.tests.deviceManagementTest.unAssignUser()'><b>unAssignUser</b><br>Test class: srimettu.tests.deviceManagementTest</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;a[class=&apos;ng-star-inserted&apos;]&quot;}
+  (Session info: chrome=125.0.6422.113)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [14988ba34945789d63e15e67008e2469, findElement {value=a[class=&apos;ng-star-inserted&apos;], using=css selector}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.113, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: C:\Users\smettu\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61164}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61164/devtoo..., se:cdpVersion: 125.0.6422.113, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 14988ba34945789d63e15e67008e2469
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy10.click(Unknown Source)
+	at srimettu.pageobjects.DeviceManagement.unAssgnuser(DeviceManagement.java:479)
+	at srimettu.tests.deviceManagementTest.unAssignUser(deviceManagementTest.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at srimettu.tests.TestNGRunner.main(TestNGRunner.java:18)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1915196011", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1915196011'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;a[class=&apos;ng-star-inserted&apos;]&quot;}
+  (Session info: chrome=125.0.6422.113)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [14988ba34945789d63e15e67008e2469, findElement {value=a[class=&apos;ng-star-inserted&apos;], using=css selector}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.113, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: C:\Users\smettu\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61164}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61164/devtoo..., se:cdpVersion: 125.0.6422.113, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 14988ba34945789d63e15e67008e2469
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy10.click(Unknown Source)
+	at srimettu.pageobjects.DeviceManagement.unAssgnuser(DeviceManagement.java:479)
+	at srimettu.tests.deviceManagementTest.unAssignUser(deviceManagementTest.java:100)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at srimettu.tests.TestNGRunner.main(TestNGRunner.java:18)
+</pre></div></td>
+<td>12</td>
+<td>srimettu.tests.deviceManagementTest@16e7dcfd</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -184,55 +249,133 @@ Session ID: b80b3119eb49089a7fae6c572e1d800b
 <td><b>Instance</b></td>
 </tr>
 <tr>
+<td title='srimettu.tests.deviceManagementTest.addGateway()'><b>addGateway</b><br>Test class: srimettu.tests.deviceManagementTest</td>
+<td></td>
+<td>5</td>
+<td>srimettu.tests.deviceManagementTest@16e7dcfd</td></tr>
+<tr>
+<td title='srimettu.tests.deviceManagementTest.assignUser()'><b>assignUser</b><br>Test class: srimettu.tests.deviceManagementTest</td>
+<td></td>
+<td>9</td>
+<td>srimettu.tests.deviceManagementTest@16e7dcfd</td></tr>
+<tr>
+<td title='srimettu.tests.EscortManagementTest.addEscortEvent()'><b>addEscortEvent</b><br>Test class: srimettu.tests.EscortManagementTest</td>
+<td></td>
+<td>8</td>
+<td>srimettu.tests.EscortManagementTest@3d121db3</td></tr>
+<tr>
+<td title='srimettu.tests.deviceManagementTest.addAlarmArea()'><b>addAlarmArea</b><br>Test class: srimettu.tests.deviceManagementTest</td>
+<td></td>
+<td>5</td>
+<td>srimettu.tests.deviceManagementTest@16e7dcfd</td></tr>
+<tr>
 <td title='srimettu.tests.DataProviderEValidation.logInCheck()'><b>logInCheck</b><br>Test class: srimettu.tests.DataProviderEValidation<br>Parameters: {pwd=s3, un=s3}</td>
 <td></td>
 <td>0</td>
-<td>srimettu.tests.DataProviderEValidation@3c87521</td></tr>
+<td>srimettu.tests.DataProviderEValidation@7fc229ab</td></tr>
 <tr>
-<td title='srimettu.tests.StandAloneTest.alarmHistory()'><b>alarmHistory</b><br>Test class: srimettu.tests.StandAloneTest</td>
+<td title='srimettu.tests.deviceManagementTest.addBeacon()'><b>addBeacon</b><br>Test class: srimettu.tests.deviceManagementTest</td>
 <td></td>
 <td>6</td>
-<td>srimettu.tests.StandAloneTest@3745e5c6</td></tr>
+<td>srimettu.tests.deviceManagementTest@16e7dcfd</td></tr>
 <tr>
-<td title='srimettu.tests.DataProviderEValidation.logInCheckdata()'><b>logInCheckdata</b><br>Test class: srimettu.tests.DataProviderEValidation<br>Parameters: {password=s3, username=s3}</td>
+<td title='srimettu.tests.deviceManagementTest.delAlarmArea()'><b>delAlarmArea</b><br>Test class: srimettu.tests.deviceManagementTest</td>
 <td></td>
-<td>0</td>
-<td>srimettu.tests.DataProviderEValidation@3c87521</td></tr>
+<td>5</td>
+<td>srimettu.tests.deviceManagementTest@16e7dcfd</td></tr>
 <tr>
-<td title='srimettu.tests.DataProviderEValidation.InvalidlogIn()'><b>InvalidlogIn</b><br>Test class: srimettu.tests.DataProviderEValidation<br>Parameters: s1, s2</td>
+<td title='srimettu.tests.deviceManagementTest.loadDevice()'><b>loadDevice</b><br>Test class: srimettu.tests.deviceManagementTest</td>
 <td></td>
-<td>0</td>
-<td>srimettu.tests.DataProviderEValidation@3c87521</td></tr>
+<td>162</td>
+<td>srimettu.tests.deviceManagementTest@16e7dcfd</td></tr>
 <tr>
 <td title='srimettu.tests.EscortManagementTest.deleteEscortEvent()'><b>deleteEscortEvent</b><br>Test class: srimettu.tests.EscortManagementTest</td>
 <td></td>
 <td>4</td>
-<td>srimettu.tests.EscortManagementTest@327b636c</td></tr>
+<td>srimettu.tests.EscortManagementTest@3d121db3</td></tr>
 <tr>
-<td title='srimettu.tests.DataProviderEValidation.InvalidlogIn()'><b>InvalidlogIn</b><br>Test class: srimettu.tests.DataProviderEValidation<br>Parameters: s2, s3</td>
+<td title='srimettu.tests.DataProviderEValidation.logInCheckdata()'><b>logInCheckdata</b><br>Test class: srimettu.tests.DataProviderEValidation<br>Parameters: {password=s3, username=s3}</td>
 <td></td>
 <td>0</td>
-<td>srimettu.tests.DataProviderEValidation@3c87521</td></tr>
-<tr>
-<td title='srimettu.tests.DataProviderEValidation.logInCheckdata()'><b>logInCheckdata</b><br>Test class: srimettu.tests.DataProviderEValidation<br>Parameters: {password=s2, username=s2}</td>
-<td></td>
-<td>0</td>
-<td>srimettu.tests.DataProviderEValidation@3c87521</td></tr>
-<tr>
-<td title='srimettu.tests.EscortManagementTest.addEscortEvent()'><b>addEscortEvent</b><br>Test class: srimettu.tests.EscortManagementTest</td>
-<td></td>
-<td>11</td>
-<td>srimettu.tests.EscortManagementTest@327b636c</td></tr>
+<td>srimettu.tests.DataProviderEValidation@7fc229ab</td></tr>
 <tr>
 <td title='srimettu.tests.DataProviderEValidation.logInCheck()'><b>logInCheck</b><br>Test class: srimettu.tests.DataProviderEValidation<br>Parameters: {pwd=s2, un=s2}</td>
 <td></td>
 <td>0</td>
-<td>srimettu.tests.DataProviderEValidation@3c87521</td></tr>
+<td>srimettu.tests.DataProviderEValidation@7fc229ab</td></tr>
+<tr>
+<td title='srimettu.tests.DataProviderEValidation.logInCheckdata()'><b>logInCheckdata</b><br>Test class: srimettu.tests.DataProviderEValidation<br>Parameters: {password=s2, username=s2}</td>
+<td></td>
+<td>0</td>
+<td>srimettu.tests.DataProviderEValidation@7fc229ab</td></tr>
+<tr>
+<td title='srimettu.tests.deviceManagementTest.deleteGateway()'><b>deleteGateway</b><br>Test class: srimettu.tests.deviceManagementTest</td>
+<td></td>
+<td>6</td>
+<td>srimettu.tests.deviceManagementTest@16e7dcfd</td></tr>
+<tr>
+<td title='srimettu.tests.DataProviderEValidation.InvalidlogIn()'><b>InvalidlogIn</b><br>Test class: srimettu.tests.DataProviderEValidation<br>Parameters: s2, s3</td>
+<td></td>
+<td>0</td>
+<td>srimettu.tests.DataProviderEValidation@7fc229ab</td></tr>
 <tr>
 <td title='srimettu.tests.StandAloneTest.mableHistory()'><b>mableHistory</b><br>Test class: srimettu.tests.StandAloneTest</td>
 <td></td>
 <td>6</td>
-<td>srimettu.tests.StandAloneTest@3745e5c6</td></tr>
+<td>srimettu.tests.StandAloneTest@3b07a0d6</td></tr>
+<tr>
+<td title='srimettu.tests.deviceManagementTest.deviceEditstaff()'><b>deviceEditstaff</b><br>Test class: srimettu.tests.deviceManagementTest</td>
+<td></td>
+<td>8</td>
+<td>srimettu.tests.deviceManagementTest@16e7dcfd</td></tr>
+<tr>
+<td title='srimettu.tests.StandAloneTest.alarmHistory()'><b>alarmHistory</b><br>Test class: srimettu.tests.StandAloneTest</td>
+<td></td>
+<td>6</td>
+<td>srimettu.tests.StandAloneTest@3b07a0d6</td></tr>
+<tr>
+<td title='srimettu.tests.DataProviderEValidation.InvalidlogIn()'><b>InvalidlogIn</b><br>Test class: srimettu.tests.DataProviderEValidation<br>Parameters: s1, s2</td>
+<td></td>
+<td>0</td>
+<td>srimettu.tests.DataProviderEValidation@7fc229ab</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='srimettu.tests.deviceManagementTest.delBeacon()'><b>delBeacon</b><br>Test class: srimettu.tests.deviceManagementTest</td>
+<td><div><pre>java.lang.Throwable: Method srimettu.tests.deviceManagementTest.delBeacon() on instance srimettu.tests.deviceManagementTest@16e7dcfd depends on not successfully finished methods 
+[srimettu.tests.deviceManagementTest.unAssignUser() on instance srimettu.tests.deviceManagementTest@16e7dcfd]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at srimettu.tests.TestNGRunner.main(TestNGRunner.java:18)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1577428742", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1577428742'><pre>java.lang.Throwable: Method srimettu.tests.deviceManagementTest.delBeacon() on instance srimettu.tests.deviceManagementTest@16e7dcfd depends on not successfully finished methods 
+[srimettu.tests.deviceManagementTest.unAssignUser() on instance srimettu.tests.deviceManagementTest@16e7dcfd]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:157)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at srimettu.tests.TestNGRunner.main(TestNGRunner.java:18)
+</pre></div></td>
+<td>0</td>
+<td>srimettu.tests.deviceManagementTest@16e7dcfd</td></tr>
 </table><p>
 </body>
 </html>
