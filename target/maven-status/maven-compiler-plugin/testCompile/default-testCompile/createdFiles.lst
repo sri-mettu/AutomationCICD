@@ -1,7 +1,6 @@
 srimettu\data\dataReader.class
 srimettu\data\dataReader$1.class
 srimettu\tests\StandAloneTest.class
-cucumber\TestNGTestRunner.class
 srimettu\TestComponents\Retry.class
 srimettu\TestComponents\baseTest.class
 srimettu\TestComponents\NewTest.class

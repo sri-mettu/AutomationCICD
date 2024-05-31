@@ -179,7 +179,7 @@
 							<version>3.2.5</version>
 							<configuration>
 								<includes>
-									<include>**/CucumberTestRunner.java</include>									
+									<include>src/test/java/cucumber/CucumberTestRunner.java</include>									
 									 </includes>
 							</configuration>
 						</plugin>
