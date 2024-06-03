@@ -20,14 +20,22 @@ public class Dashboard extends AbstractComponent {
 	@FindBy(css = "div[class='pageName']")
 	WebElement pageNameDB;
 
-	@FindBy(xpath = "(//p[@class='title'])[6]")
+	@FindBy(xpath = "//app-card[6]")
 	WebElement maintenanceAlarm;
-	@FindBy(xpath = "(//textarea[@type='text'])[1]")
+	@FindBy(xpath = "//app-card[6]//b")
+	WebElement mAlarmCount;	
+	@FindBy(xpath= "//app-card[10]")
+	WebElement devicestatusAlert;
+	@FindBy(xpath= "//app-card[10]//b")
+	WebElement dsAlertCount;
+	@FindBy(xpath = "(//textarea[@type='text'])[1]")	
 	WebElement MtextBox;
 	@FindBy(xpath = "(//mat-row/mat-cell/span/button)[1]")
 	WebElement mClear;
-	@FindBy(xpath = "(//p[@class='title'])[9]")
+	@FindBy(xpath = "//app-card[9]")
 	WebElement beaconAlert;
+	@FindBy(xpath = "//app-card[9]//b")
+	WebElement bAlertCount;
 	@FindBy(xpath = "(//button[@class='clearbutton'])[1]")
 	WebElement bClear;
 	@FindBy(id = "reason-input")
@@ -46,6 +54,12 @@ public class Dashboard extends AbstractComponent {
 	@FindBy(id = "mat-button-toggle-2-button")
 	public
 	WebElement alarmHistory;
+	@FindBy(id = "mat-button-toggle-1-button")
+	public
+	WebElement charts;
+	@FindBy(xpath = "(//div[@class='chart-title'])[1]")
+	public
+	WebElement charttitle;
 	@FindBy(css = "div[role='alert']")
 	public WebElement message;
 
@@ -58,22 +72,40 @@ public class Dashboard extends AbstractComponent {
 	}
 
 	public void mAlarmClear(String reason) {
+if (mAlarmCount.getText().contains("0")) {			
+			System.out.println("No Maintenance Alarm present");
+		}else {
 		maintenanceAlarm.click();
 		MtextBox.sendKeys(reason);
 		mClear.click();
 		waitForWebElementToAppear(message);
-		System.out.println(message.getText()+" Maintenance Alarm Cleared");		
+		System.out.println(message.getText()+" Maintenance Alarm Cleared");}		
+
+	}
+	public void devicestatusClear(String reason) {
+		if (dsAlertCount.getText().contains("0")) {			
+			System.out.println("No Device Status Alert present");
+		}else {
+		devicestatusAlert.click();
+		bClear.click();
+		reasonBox.sendKeys(reason);
+		bSubmit.click();
+		waitForWebElementToAppear(message);
+		System.out.println(message.getText()+" Device Status Alert Cleared");}		
 
 	}
 
 	public void bAlertClear(String reason) {
+		if (bAlertCount.getText().contains("0")) {			
+			System.out.println("No Beacon Alert present");
+		}else {
 		beaconAlert.click();
 		bClear.click();
 		reasonBox.sendKeys(reason);		
 		bSubmit.click();
 		bclose.click();
 		waitForWebElementToAppear(message);
-		System.out.println(message.getText()+" Beacon Alert Cleared");
+		System.out.println(message.getText()+" Beacon Alert Cleared");}
 
 	}
 	public void logoutApplication() throws InterruptedException {
@@ -98,6 +130,15 @@ public String alarmHis() throws InterruptedException {
 	alarmHistory.click();
 	System.out.println(htitle.getText());
 	return htitle.getText();
+	
+	
+}
+public String chartInfo() throws InterruptedException {				
+	scrollWindow();
+	charts.click();
+	waitForWebElementToAppear(charttitle);
+	System.out.println(charttitle.getText());
+	return charttitle.getText();
 	
 	
 }
