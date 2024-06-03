@@ -8,6 +8,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.cucumber.core.cli.Main;
 import srimettu.TestComponents.baseTest;
 import srimettu.pageobjects.Dashboard;
 import srimettu.pageobjects.LandingPage;
@@ -44,6 +45,10 @@ public class StepDefenitionImpl extends baseTest{
 	@And ("^Beacon Alert is cleared with reason (.+)$")
 	public void Beacon_Alert_is_cleared(String comment) {	
 		dashboard.bAlertClear(comment);				
+	}
+	@And ("^Device Status Alert is cleared with reason (.+)$")
+	public void Device_Status_Alert_is_cleared(String comment) {	
+		dashboard.devicestatusClear(comment);				
 	}
 	@And ("^Maintenance Alert is cleared with reason (.+)$")
 	public void Maintenance_Alert_is_cleared(String comment) {	
@@ -90,5 +95,17 @@ public class StepDefenitionImpl extends baseTest{
 		DeviceManagement devicemanagement =new DeviceManagement(driver);
 		devicemanagement.menubutton();
 		devicemanagement.beaconAdd(devicename, mcaddr);
+	}
+	@And ("Check Mable History Information")
+	public void MableHistoryInformation() throws InterruptedException {
+		dashboard.mabHis();
+	}
+	@And ("Check Alarm History Information")
+	public void AlarmHistoryInformation() throws InterruptedException {
+		dashboard.alarmHis();
+	}
+	@And ("Check Charts Information")
+	public void ChartsInformation() throws InterruptedException {
+		dashboard.chartInfo();
 	}
 }
