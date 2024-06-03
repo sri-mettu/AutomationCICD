@@ -3,14 +3,13 @@
 <suite name="Failed suite [Surefire suite]" verbose="0">
   <test thread-count="5" name="Surefire test(failed)" verbose="0">
     <classes>
-      <class name="srimettu.tests.deviceManagementTest">
+      <class name="cucumber.CucumberTestRunner">
         <methods>
-          <include name="quitBrowser"/>
-          <include name="delBeacon"/>
-          <include name="unAssignUser"/>
-          <include name="launchApplication"/>
+          <include name="setUpClass"/>
+          <include name="runScenario" invocation-numbers="0"/>
+          <include name="tearDownClass"/>
         </methods>
-      </class> <!-- srimettu.tests.deviceManagementTest -->
+      </class> <!-- cucumber.CucumberTestRunner -->
     </classes>
   </test> <!-- Surefire test(failed) -->
 </suite> <!-- Failed suite [Surefire suite] -->

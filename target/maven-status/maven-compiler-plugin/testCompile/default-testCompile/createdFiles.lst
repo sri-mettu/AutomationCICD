@@ -1,6 +1,7 @@
 srimettu\data\dataReader.class
 srimettu\data\dataReader$1.class
 srimettu\tests\StandAloneTest.class
+cucumber\CucumberTestRunner.class
 srimettu\TestComponents\Retry.class
 srimettu\TestComponents\baseTest.class
 srimettu\TestComponents\NewTest.class
@@ -8,7 +9,9 @@ srimettu\tests\TestNGRunner.class
 srimettu\tests\EscortManagementTest.class
 srimettu\tests\UserManagementTest.class
 srimettu\TestComponents\Listeners.class
+srimettu\tests\SysBackup.class
 srimettu\TestComponents\baseTest$1.class
 srimettu\tests\deviceManagementTest.class
 srimettu\stepDefinitions\StepDefenitionImpl.class
 srimettu\tests\DataProviderEValidation.class
+srimettu\tests\SysConfigTest.class

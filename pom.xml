@@ -177,9 +177,9 @@
 							<groupId>org.apache.maven.plugins</groupId>
 							<artifactId>maven-surefire-plugin</artifactId>
 							<version>3.2.5</version>
-							<configuration>
+							<configuration>								
 								<includes>
-									<include>src/test/java/cucumber/CucumberTestRunner.java</include>									
+									<include>**/CucumberTestRunner.java</include>									
 									 </includes>
 							</configuration>
 						</plugin>
