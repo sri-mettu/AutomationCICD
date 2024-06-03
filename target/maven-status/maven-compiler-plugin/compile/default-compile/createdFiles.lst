@@ -1,8 +1,10 @@
 srimettu\MainInvoker\ImpInvoker.class
-srimettu\pageobjects\UserManagement.class
-srimettu\resources\ExtentReporterNG.class
-srimettu\pageobjects\LandingPage.class
 srimettu\pageobjects\DeviceManagement.class
 srimettu\pageobjects\Dashboard.class
+srimettu\pageobjects\UserManagement.class
 srimettu\AbstractComponents\AbstractComponent.class
 srimettu\pageobjects\EscortManagement.class
+srimettu\pageobjects\SystemBackup.class
+srimettu\pageobjects\SystemConfig.class
+srimettu\resources\ExtentReporterNG.class
+srimettu\pageobjects\LandingPage.class
