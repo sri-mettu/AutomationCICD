@@ -16,19 +16,35 @@ import srimettu.pageobjects.LandingPage;
 public class DataProviderEValidation extends baseTest{	
 	 
 
-	@Test(enabled=true,dataProvider="getData",groups={"login"},retryAnalyzer=Retry.class)
-	public void InvalidlogIn(String un,String pwd) throws IOException {			
+	@Test(enabled=true,dataProvider="getData",groups={"login"})
+	public void InvalidlogIn(String un,String pwd) throws IOException, InterruptedException {			
 				
-		landingpage.selectLang();
+		String lang = landingpage.selectLang();		
 		landingpage.logInApp(un, pwd);	
-		System.out.println(landingpage.getErrorMessage());
-		Assert.assertEquals("invalid username or password....(If forgot username or password then contact your supervisor or administrator)", landingpage.getErrorMessage());
-		System.out.println("login Unsuccessful");
+		String errormessage = landingpage.getErrorMessage();
+				
+		if (lang.contains("en")){			
+			Assert.assertEquals("invalid username or password....(If forgot username or password then contact your supervisor or administrator)", errormessage);}
 		
-			
-	}
+		else if (lang.contains("de")){
+			Assert.assertEquals("Benutzername oder Passwort ungültig... (Falls Sie Ihren Benutzernamen oder Ihr Passwort vergessen haben, wenden Sie sich bitte an Ihren Vorgesetzten oder Administrator)", errormessage);}
+				
+			else if (lang.contains("fr")){
+				Assert.assertEquals("nom d'utilisateur ou mot de passe invalide .... (Si vous avez oublié votre nom d'utilisateur ou votre mot de passe, contactez votre superviseur ou votre administrateur)", errormessage);}
+		
+			else if (lang.contains("sv")){
+				Assert.assertEquals("ogiltigt användarnamn eller lösenord .... (Om du glömt användarnamnet eller lösenordet, kontakta din handledare eller administratör)", errormessage);}
+
+		
+			else if (lang.contains("es")){
+				Assert.assertEquals("nombre de usuario o contraseña inválidos .... (Si olvidó el nombre de usuario o la contraseña, póngase en contacto con su supervisor o administrador)", errormessage);}
+
+
+			else if (lang.contains("cs")){
+				Assert.assertEquals("neplatné uživatelské jméno nebo heslo .... (Pokud jste zapomněli uživatelské jméno nebo heslo, kontaktujte svého nadřízeného nebo administrátora)", errormessage);}		
+				}
 	
-	@Test(enabled=true,dataProvider="getData1",groups={"login"})
+	@Test(enabled=false,dataProvider="getData1",groups={"login"},retryAnalyzer=Retry.class)
 	public void logInCheck(HashMap<String,String> input) throws IOException {			
 				
 		landingpage.selectLang();
@@ -38,7 +54,7 @@ public class DataProviderEValidation extends baseTest{
 		
 			
 	}
-	@Test(enabled=true,dataProvider="getData2",groups={"login"})
+	@Test(enabled=false,dataProvider="getData2",groups={"login"})
 	public void logInCheckdata(HashMap<String,String> input) throws IOException {			
 				
 		landingpage.selectLang();

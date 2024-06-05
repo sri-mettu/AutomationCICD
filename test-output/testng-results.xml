@@ -1,65 +1,211 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="10" passed="9" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-03T15:51:36 BST" name="Default suite" finished-at="2024-06-03T15:52:09 BST" duration-ms="32969">
+  <suite started-at="2024-06-04T11:53:40 BST" name="Default suite" finished-at="2024-06-04T11:57:52 BST" duration-ms="251911">
     <groups>
-      <group name="alertClear">
-        <method signature="StandAloneTest.bAlertClear()[pri:0, instance:srimettu.tests.StandAloneTest@7b50df34]" name="bAlertClear" class="srimettu.tests.StandAloneTest"/>
-        <method signature="StandAloneTest.mAlarmClear()[pri:0, instance:srimettu.tests.StandAloneTest@7b50df34]" name="mAlarmClear" class="srimettu.tests.StandAloneTest"/>
-      </group> <!-- alertClear -->
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.CucumberTestRunner@895e367]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-06-03T15:51:36 BST" name="Default test" finished-at="2024-06-03T15:52:09 BST" duration-ms="32969">
-      <class name="srimettu.tests.StandAloneTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:srimettu.tests.StandAloneTest@7b50df34]" started-at="2024-06-03T15:51:36 BST" name="launchApplication" finished-at="2024-06-03T15:51:39 BST" duration-ms="2988" status="PASS">
+    <test started-at="2024-06-04T11:53:40 BST" name="Default test" finished-at="2024-06-04T11:57:52 BST" duration-ms="251911">
+      <class name="cucumber.CucumberTestRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:cucumber.CucumberTestRunner@895e367]" started-at="2024-06-04T11:53:40 BST" name="setUpClass" finished-at="2024-06-04T11:53:41 BST" duration-ms="710" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@4768b95c]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="alarmHistory()[pri:0, instance:srimettu.tests.StandAloneTest@7b50df34]" started-at="2024-06-03T15:51:39 BST" name="alarmHistory" finished-at="2024-06-03T15:51:46 BST" duration-ms="6846" status="PASS">
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.CucumberTestRunner@895e367]" started-at="2024-06-04T11:53:41 BST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-06-04T11:53:56 BST" duration-ms="14976" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Device Status Alert Clear"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Dashboard"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[Remote browser did not respond to getCurrentUrl
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: driver.version: RemoteWebDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: Remote browser did not respond to getCurrentUrl
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.remote.RemoteWebDriver.getCurrentUrl(RemoteWebDriver.java:314)
+at srimettu.pageobjects.LandingPage.goTo(LandingPage.java:43)
+at srimettu.TestComponents.baseTest.launchApplication(baseTest.java:87)
+at srimettu.stepDefinitions.StepDefenitionImpl.Open_the_browser_and_enter_the_url(StepDefenitionImpl.java:25)
+at ✽.Open the browser and enter the url(file:///C:/Users/smettu/CI-CD/src/test/java/cucumber/Dashboard.feature:6)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- alarmHistory -->
-        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:srimettu.tests.StandAloneTest@7b50df34]" started-at="2024-06-03T15:51:46 BST" name="quitBrowser" finished-at="2024-06-03T15:51:46 BST" duration-ms="277" status="PASS">
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.CucumberTestRunner@895e367]" started-at="2024-06-04T11:53:56 BST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-06-04T11:54:06 BST" duration-ms="9863" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Maintenance Alert Clear"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Dashboard"]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- quitBrowser -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:srimettu.tests.StandAloneTest@7b50df34]" started-at="2024-06-03T15:51:46 BST" name="launchApplication" finished-at="2024-06-03T15:51:48 BST" duration-ms="2412" status="PASS">
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.CucumberTestRunner@895e367]" started-at="2024-06-04T11:54:06 BST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-06-04T11:54:13 BST" duration-ms="7474" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Beacon Alert Clear"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Dashboard"]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="bAlertClear()[pri:0, instance:srimettu.tests.StandAloneTest@7b50df34]" started-at="2024-06-03T15:51:48 BST" name="bAlertClear" finished-at="2024-06-03T15:51:53 BST" duration-ms="4545" status="PASS">
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.CucumberTestRunner@895e367]" started-at="2024-06-04T11:54:13 BST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-06-04T11:54:23 BST" duration-ms="9657" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check Charts Tab"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Dashboard"]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- bAlertClear -->
-        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:srimettu.tests.StandAloneTest@7b50df34]" started-at="2024-06-03T15:51:53 BST" name="quitBrowser" finished-at="2024-06-03T15:51:53 BST" duration-ms="249" status="PASS">
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.CucumberTestRunner@895e367]" started-at="2024-06-04T11:54:23 BST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-06-04T11:54:32 BST" duration-ms="9677" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check AlarmHistory Tab"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Dashboard"]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- quitBrowser -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:srimettu.tests.StandAloneTest@7b50df34]" started-at="2024-06-03T15:51:53 BST" name="launchApplication" finished-at="2024-06-03T15:51:56 BST" duration-ms="2418" status="PASS">
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.CucumberTestRunner@895e367]" started-at="2024-06-04T11:54:32 BST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-06-04T11:54:42 BST" duration-ms="9790" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check MableHistory Tab"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Dashboard"]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="mAlarmClear()[pri:0, instance:srimettu.tests.StandAloneTest@7b50df34]" started-at="2024-06-03T15:51:56 BST" name="mAlarmClear" finished-at="2024-06-03T15:51:59 BST" duration-ms="3157" status="PASS">
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.CucumberTestRunner@895e367]" started-at="2024-06-04T11:54:42 BST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-06-04T11:57:27 BST" duration-ms="165251" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Loading the devices from Hub"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Device Management Page"]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- mAlarmClear -->
-        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:srimettu.tests.StandAloneTest@7b50df34]" started-at="2024-06-03T15:51:59 BST" name="quitBrowser" finished-at="2024-06-03T15:51:59 BST" duration-ms="249" status="PASS">
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.CucumberTestRunner@895e367]" started-at="2024-06-04T11:57:27 BST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-06-04T11:57:39 BST" duration-ms="11545" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Edit Device"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Device Management Page"]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- quitBrowser -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:srimettu.tests.StandAloneTest@7b50df34]" started-at="2024-06-03T15:51:59 BST" name="launchApplication" finished-at="2024-06-03T15:52:01 BST" duration-ms="2485" status="PASS">
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.CucumberTestRunner@895e367]" started-at="2024-06-04T11:57:39 BST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-06-04T11:57:48 BST" duration-ms="9344" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Add Beacon"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Device Management Page"]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="mableHistory()[pri:0, instance:srimettu.tests.StandAloneTest@7b50df34]" started-at="2024-06-03T15:52:01 BST" name="mableHistory" finished-at="2024-06-03T15:52:08 BST" duration-ms="6974" status="PASS">
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.CucumberTestRunner@895e367]" started-at="2024-06-04T11:57:48 BST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-06-04T11:57:52 BST" duration-ms="3374" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Invalid Login check"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login Check"]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- mableHistory -->
-        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:srimettu.tests.StandAloneTest@7b50df34]" started-at="2024-06-03T15:52:08 BST" name="quitBrowser" finished-at="2024-06-03T15:52:09 BST" duration-ms="312" status="PASS">
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:cucumber.CucumberTestRunner@895e367]" started-at="2024-06-04T11:57:52 BST" name="tearDownClass" finished-at="2024-06-04T11:57:52 BST" duration-ms="179" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- quitBrowser -->
-      </class> <!-- srimettu.tests.StandAloneTest -->
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- cucumber.CucumberTestRunner -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>4/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>9/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Jun 03 15:51:36 BST 2024</td>
+<td>Started on:</td><td>Tue Jun 04 11:53:40 BST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>32 seconds (32969 ms)</td>
+<tr><td>Total time:</td><td>251 seconds (251911 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,39 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='cucumber.CucumberTestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.CucumberTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Device Status Alert Clear", "Dashboard"</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: Remote browser did not respond to getCurrentUrl
+Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.getCurrentUrl(RemoteWebDriver.java:314)
+	at srimettu.pageobjects.LandingPage.goTo(LandingPage.java:43)
+	at srimettu.TestComponents.baseTest.launchApplication(baseTest.java:87)
+	at srimettu.stepDefinitions.StepDefenitionImpl.Open_the_browser_and_enter_the_url(StepDefenitionImpl.java:25)
+	at ✽.Open the browser and enter the url(file:///C:/Users/smettu/CI-CD/src/test/java/cucumber/Dashboard.feature:6)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1753746465", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1753746465'><pre>org.openqa.selenium.WebDriverException: Remote browser did not respond to getCurrentUrl
+Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.getCurrentUrl(RemoteWebDriver.java:314)
+	at srimettu.pageobjects.LandingPage.goTo(LandingPage.java:43)
+	at srimettu.TestComponents.baseTest.launchApplication(baseTest.java:87)
+	at srimettu.stepDefinitions.StepDefenitionImpl.Open_the_browser_and_enter_the_url(StepDefenitionImpl.java:25)
+	at ✽.Open the browser and enter the url(file:///C:/Users/smettu/CI-CD/src/test/java/cucumber/Dashboard.feature:6)
+</pre></div></td>
+<td>14</td>
+<td>cucumber.CucumberTestRunner@895e367</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,25 +109,50 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='srimettu.tests.StandAloneTest.mAlarmClear()'><b>mAlarmClear</b><br>Test class: srimettu.tests.StandAloneTest</td>
+<td title='cucumber.CucumberTestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.CucumberTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Beacon Alert Clear", "Dashboard"</td>
+<td></td>
+<td>7</td>
+<td>cucumber.CucumberTestRunner@895e367</td></tr>
+<tr>
+<td title='cucumber.CucumberTestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.CucumberTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check Charts Tab", "Dashboard"</td>
+<td></td>
+<td>9</td>
+<td>cucumber.CucumberTestRunner@895e367</td></tr>
+<tr>
+<td title='cucumber.CucumberTestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.CucumberTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Edit Device", "Device Management Page"</td>
+<td></td>
+<td>11</td>
+<td>cucumber.CucumberTestRunner@895e367</td></tr>
+<tr>
+<td title='cucumber.CucumberTestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.CucumberTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Invalid Login check", "Login Check"</td>
 <td></td>
 <td>3</td>
-<td>srimettu.tests.StandAloneTest@7b50df34</td></tr>
+<td>cucumber.CucumberTestRunner@895e367</td></tr>
 <tr>
-<td title='srimettu.tests.StandAloneTest.alarmHistory()'><b>alarmHistory</b><br>Test class: srimettu.tests.StandAloneTest</td>
+<td title='cucumber.CucumberTestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.CucumberTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check AlarmHistory Tab", "Dashboard"</td>
 <td></td>
-<td>6</td>
-<td>srimettu.tests.StandAloneTest@7b50df34</td></tr>
+<td>9</td>
+<td>cucumber.CucumberTestRunner@895e367</td></tr>
 <tr>
-<td title='srimettu.tests.StandAloneTest.mableHistory()'><b>mableHistory</b><br>Test class: srimettu.tests.StandAloneTest</td>
+<td title='cucumber.CucumberTestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.CucumberTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check MableHistory Tab", "Dashboard"</td>
 <td></td>
-<td>6</td>
-<td>srimettu.tests.StandAloneTest@7b50df34</td></tr>
+<td>9</td>
+<td>cucumber.CucumberTestRunner@895e367</td></tr>
 <tr>
-<td title='srimettu.tests.StandAloneTest.bAlertClear()'><b>bAlertClear</b><br>Test class: srimettu.tests.StandAloneTest</td>
+<td title='cucumber.CucumberTestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.CucumberTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Maintenance Alert Clear", "Dashboard"</td>
 <td></td>
-<td>4</td>
-<td>srimettu.tests.StandAloneTest@7b50df34</td></tr>
+<td>9</td>
+<td>cucumber.CucumberTestRunner@895e367</td></tr>
+<tr>
+<td title='cucumber.CucumberTestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.CucumberTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add Beacon", "Device Management Page"</td>
+<td></td>
+<td>9</td>
+<td>cucumber.CucumberTestRunner@895e367</td></tr>
+<tr>
+<td title='cucumber.CucumberTestRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.CucumberTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Loading the devices from Hub", "Device Management Page"</td>
+<td></td>
+<td>165</td>
+<td>cucumber.CucumberTestRunner@895e367</td></tr>
 </table><p>
 </body>
 </html>

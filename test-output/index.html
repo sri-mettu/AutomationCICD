@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\smettu\AppData\Local\Temp\testng-eclipse-1851166835\testng-customsuite.xml</span>
+                    <span>C:\Users\smettu\AppData\Local\Temp\testng-eclipse--547638497\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,   4 passed</span>
+                    <span class="method-stats">10 methods, 1 failed,   9 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Default_suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="cucumber.CucumberTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Device Status Alert Clear&quot;, &quot;Dashboard&quot;)">runScenario("Device Status Alert Clear", "Dashboard")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,22 +117,47 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="srimettu.tests.StandAloneTest" class="method navigator-link" hash-for-method="alarmHistory">alarmHistory</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="cucumber.CucumberTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Beacon Alert Clear&quot;, &quot;Dashboard&quot;)">runScenario("Beacon Alert Clear", "Dashboard")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="srimettu.tests.StandAloneTest" class="method navigator-link" hash-for-method="bAlertClear">bAlertClear</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="cucumber.CucumberTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Check Charts Tab&quot;, &quot;Dashboard&quot;)">runScenario("Check Charts Tab", "Dashboard")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="srimettu.tests.StandAloneTest" class="method navigator-link" hash-for-method="mAlarmClear">mAlarmClear</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="cucumber.CucumberTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Edit Device&quot;, &quot;Device Management Page&quot;)">runScenario("Edit Device", "Device Management Page")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="srimettu.tests.StandAloneTest" class="method navigator-link" hash-for-method="mableHistory">mableHistory</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="cucumber.CucumberTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Invalid Login check&quot;, &quot;Login Check&quot;)">runScenario("Invalid Login check", "Login Check")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="cucumber.CucumberTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Check AlarmHistory Tab&quot;, &quot;Dashboard&quot;)">runScenario("Check AlarmHistory Tab", "Dashboard")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="cucumber.CucumberTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Check MableHistory Tab&quot;, &quot;Dashboard&quot;)">runScenario("Check MableHistory Tab", "Dashboard")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="cucumber.CucumberTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Maintenance Alert Clear&quot;, &quot;Dashboard&quot;)">runScenario("Maintenance Alert Clear", "Dashboard")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="cucumber.CucumberTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Add Beacon&quot;, &quot;Device Management Page&quot;)">runScenario("Add Beacon", "Device Management Page")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="cucumber.CucumberTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Loading the devices from Hub&quot;, &quot;Device Management Page&quot;)">runScenario("Loading the devices from Hub", "Device Management Page")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -133,38 +172,129 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-passed">
+          <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">srimettu.tests.StandAloneTest</span>
+              <img src="failed.png"/>
+              <span class="class-name">cucumber.CucumberTestRunner</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="alarmHistory">
-                  </a> <!-- alarmHistory -->
-                  <span class="method-name">alarmHistory</span>
+                  <a name="runScenario(&quot;Device Status Alert Clear&quot;, &quot;Dashboard&quot;)">
+                  </a> <!-- runScenario("Device Status Alert Clear", "Dashboard") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Device Status Alert Clear","Dashboard")</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: Remote browser did not respond to getCurrentUrl
+Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.getCurrentUrl(RemoteWebDriver.java:314)
+	at srimettu.pageobjects.LandingPage.goTo(LandingPage.java:43)
+	at srimettu.TestComponents.baseTest.launchApplication(baseTest.java:87)
+	at srimettu.stepDefinitions.StepDefenitionImpl.Open_the_browser_and_enter_the_url(StepDefenitionImpl.java:25)
+	at ✽.Open the browser and enter the url(file:///C:/Users/smettu/CI-CD/src/test/java/cucumber/Dashboard.feature:6)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">cucumber.CucumberTestRunner</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Beacon Alert Clear&quot;, &quot;Dashboard&quot;)">
+                  </a> <!-- runScenario("Beacon Alert Clear", "Dashboard") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Beacon Alert Clear","Dashboard")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="bAlertClear">
-                  </a> <!-- bAlertClear -->
-                  <span class="method-name">bAlertClear</span>
+                  <a name="runScenario(&quot;Check Charts Tab&quot;, &quot;Dashboard&quot;)">
+                  </a> <!-- runScenario("Check Charts Tab", "Dashboard") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Check Charts Tab","Dashboard")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="mAlarmClear">
-                  </a> <!-- mAlarmClear -->
-                  <span class="method-name">mAlarmClear</span>
+                  <a name="runScenario(&quot;Edit Device&quot;, &quot;Device Management Page&quot;)">
+                  </a> <!-- runScenario("Edit Device", "Device Management Page") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Edit Device","Device Management Page")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="mableHistory">
-                  </a> <!-- mableHistory -->
-                  <span class="method-name">mableHistory</span>
+                  <a name="runScenario(&quot;Invalid Login check&quot;, &quot;Login Check&quot;)">
+                  </a> <!-- runScenario("Invalid Login check", "Login Check") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Invalid Login check","Login Check")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Check AlarmHistory Tab&quot;, &quot;Dashboard&quot;)">
+                  </a> <!-- runScenario("Check AlarmHistory Tab", "Dashboard") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Check AlarmHistory Tab","Dashboard")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Check MableHistory Tab&quot;, &quot;Dashboard&quot;)">
+                  </a> <!-- runScenario("Check MableHistory Tab", "Dashboard") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Check MableHistory Tab","Dashboard")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Maintenance Alert Clear&quot;, &quot;Dashboard&quot;)">
+                  </a> <!-- runScenario("Maintenance Alert Clear", "Dashboard") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Maintenance Alert Clear","Dashboard")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Add Beacon&quot;, &quot;Device Management Page&quot;)">
+                  </a> <!-- runScenario("Add Beacon", "Device Management Page") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Add Beacon","Device Management Page")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Loading the devices from Hub&quot;, &quot;Device Management Page&quot;)">
+                  </a> <!-- runScenario("Loading the devices from Hub", "Device Management Page") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Loading the devices from Hub","Device Management Page")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -172,7 +302,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\smettu\AppData\Local\Temp\testng-eclipse-1851166835\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\smettu\AppData\Local\Temp\testng-eclipse--547638497\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -181,7 +311,7 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;srimettu.tests.StandAloneTest&quot;/&gt;
+      &lt;class name=&quot;cucumber.CucumberTestRunner&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -206,14 +336,10 @@
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
-              <span class="test-group-name">alertClear</span>
+              <span class="test-group-name">cucumber</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">bAlertClear</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">mAlarmClear</span>
+                <span class="method-in-group-name">runScenario</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -233,28 +359,52 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(10);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'mableHistory')
-data.setCell(0, 2, 'srimettu.tests.StandAloneTest')
-data.setCell(0, 3, 6974);
+data.setCell(0, 1, 'runScenario')
+data.setCell(0, 2, 'cucumber.CucumberTestRunner')
+data.setCell(0, 3, 165251);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'alarmHistory')
-data.setCell(1, 2, 'srimettu.tests.StandAloneTest')
-data.setCell(1, 3, 6846);
+data.setCell(1, 1, 'runScenario')
+data.setCell(1, 2, 'cucumber.CucumberTestRunner')
+data.setCell(1, 3, 14976);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'bAlertClear')
-data.setCell(2, 2, 'srimettu.tests.StandAloneTest')
-data.setCell(2, 3, 4545);
+data.setCell(2, 1, 'runScenario')
+data.setCell(2, 2, 'cucumber.CucumberTestRunner')
+data.setCell(2, 3, 11545);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'mAlarmClear')
-data.setCell(3, 2, 'srimettu.tests.StandAloneTest')
-data.setCell(3, 3, 3157);
+data.setCell(3, 1, 'runScenario')
+data.setCell(3, 2, 'cucumber.CucumberTestRunner')
+data.setCell(3, 3, 9863);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'runScenario')
+data.setCell(4, 2, 'cucumber.CucumberTestRunner')
+data.setCell(4, 3, 9790);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'runScenario')
+data.setCell(5, 2, 'cucumber.CucumberTestRunner')
+data.setCell(5, 3, 9677);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'runScenario')
+data.setCell(6, 2, 'cucumber.CucumberTestRunner')
+data.setCell(6, 3, 9657);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'runScenario')
+data.setCell(7, 2, 'cucumber.CucumberTestRunner')
+data.setCell(7, 3, 9344);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'runScenario')
+data.setCell(8, 2, 'cucumber.CucumberTestRunner')
+data.setCell(8, 3, 7474);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'runScenario')
+data.setCell(9, 2, 'cucumber.CucumberTestRunner')
+data.setCell(9, 3, 3374);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 21 seconds</span>
+              <span class="suite-total-time">Total running time: 4 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -269,18 +419,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">2 ignored methods</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">srimettu.tests.StandAloneTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">logIn</span>
-                <br/>
-                <span class="ignored-method-name">logOut</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Default_suite" class="panel">
@@ -289,55 +430,57 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">srimettu.tests.StandAloneTest</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">launchApplication</span>
+              <div class="chronological-class-name">cucumber.CucumberTestRunner</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUpClass(org.testng.TestRunner@4768b95c)</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- configuration-method before -->
+              </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">alarmHistory</span>
-                <span class="method-start">2990 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Device Status Alert Clear", "Dashboard")</span>
+                <span class="method-start">726 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">quitBrowser</span>
-                <span class="method-start">9841 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">launchApplication</span>
-                <span class="method-start">10120 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">bAlertClear</span>
-                <span class="method-start">12532 ms</span>
+                <span class="method-name">runScenario("Maintenance Alert Clear", "Dashboard")</span>
+                <span class="method-start">15719 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">quitBrowser</span>
-                <span class="method-start">17079 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">launchApplication</span>
-                <span class="method-start">17331 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">mAlarmClear</span>
-                <span class="method-start">19750 ms</span>
+                <span class="method-name">runScenario("Beacon Alert Clear", "Dashboard")</span>
+                <span class="method-start">25583 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">quitBrowser</span>
-                <span class="method-start">22908 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">launchApplication</span>
-                <span class="method-start">23157 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">mableHistory</span>
-                <span class="method-start">25642 ms</span>
+                <span class="method-name">runScenario("Check Charts Tab", "Dashboard")</span>
+                <span class="method-start">33059 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">quitBrowser</span>
-                <span class="method-start">32619 ms</span>
-              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Check AlarmHistory Tab", "Dashboard")</span>
+                <span class="method-start">42717 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Check MableHistory Tab", "Dashboard")</span>
+                <span class="method-start">52395 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Loading the devices from Hub", "Device Management Page")</span>
+                <span class="method-start">62186 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Edit Device", "Device Management Page")</span>
+                <span class="method-start">227438 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Add Beacon", "Device Management Page")</span>
+                <span class="method-start">238985 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Invalid Login check", "Login Check")</span>
+                <span class="method-start">248330 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDownClass</span>
+                <span class="method-start">251708 ms</span>
+              </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

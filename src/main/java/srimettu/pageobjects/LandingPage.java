@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 
 import srimettu.AbstractComponents.AbstractComponent;
 
@@ -22,8 +23,8 @@ public class LandingPage extends AbstractComponent {
 	}
 	
 	// PageFactory
-	@FindBy(id = "sel1")
-	WebElement selLang;
+	@FindBy(id = "sel1")	
+	WebElement selLang;	
 	@FindBy(name = "username")
 	WebElement username;
 	@FindBy(name = "password")
@@ -31,8 +32,7 @@ public class LandingPage extends AbstractComponent {
 	@FindBy(xpath = "//span[contains(@class,'mat-checkbox-label')]")
 	WebElement rememberme;
 	@FindBy(className = "btn-primary")
-	WebElement login;
-	
+	WebElement login;	
 	@FindBy(css = "p[style='color: red;']")
 	WebElement errorMessage;
 	
@@ -44,7 +44,7 @@ public class LandingPage extends AbstractComponent {
 		
 	}
 
-	public void selectLang() throws IOException {
+	public String selectLang() throws IOException {
 		Properties prop = new Properties();
 		FileInputStream fis = new FileInputStream(
 		//System.getProperty("user.dir") + "\\src\\main\\java\\srimettu\\resources\\GlobalData.properties");
@@ -55,6 +55,7 @@ public class LandingPage extends AbstractComponent {
 		Select dropdown = new Select(Languagedropdown);
 		//dropdown.selectByIndex(x);
 		dropdown.selectByValue(lang);
+		return lang;
 
 	}
 
@@ -95,11 +96,6 @@ public class LandingPage extends AbstractComponent {
 		//System.out.println("Logged In");
 		Dashboard dashboard = new Dashboard(driver);
 		return dashboard;
-	}
-
-	 
-
-	
-	
+	}	
 
 }
