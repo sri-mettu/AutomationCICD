@@ -1,7 +1,14 @@
 package srimettu.stepDefinitions;
 
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Properties;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
 import io.cucumber.java.en.And;
@@ -28,19 +35,59 @@ public class StepDefenitionImpl extends baseTest{
 	@Given("^Logged in with username (.+) and password (.+)$")
 	public void Logged_in_with_username_and_password(String username, String password) throws IOException { 
 		dashboard = landingpage.logInApp(username, password);
+		
 	}
 	
-	@Given("{string} message is displayed")
-	public void invalidLogin(String string) {
+	@Then ("Error message is displayed")	
+	public void invalidLogin() throws IOException {
+		String lang = landingpage.selectLang();
 		String errormessage = landingpage.getErrorMessage();
-		Assert.assertTrue(errormessage.equalsIgnoreCase(string));
+		if (lang.contains("en")){			
+			Assert.assertEquals("invalid username or password....(If forgot username or password then contact your supervisor or administrator)", errormessage);}
+		
+		else if (lang.contains("de")){
+			Assert.assertEquals("Benutzername oder Passwort ungültig... (Falls Sie Ihren Benutzernamen oder Ihr Passwort vergessen haben, wenden Sie sich bitte an Ihren Vorgesetzten oder Administrator)", errormessage);}
+				
+			else if (lang.contains("fr")){
+				Assert.assertEquals("nom d'utilisateur ou mot de passe invalide .... (Si vous avez oublié votre nom d'utilisateur ou votre mot de passe, contactez votre superviseur ou votre administrateur)", errormessage);}
+		
+			else if (lang.contains("sv")){
+				Assert.assertEquals("ogiltigt användarnamn eller lösenord .... (Om du glömt användarnamnet eller lösenordet, kontakta din handledare eller administratör)", errormessage);}
+	
+			else if (lang.contains("es")){
+				Assert.assertEquals("nombre de usuario o contraseña inválidos .... (Si olvidó el nombre de usuario o la contraseña, póngase en contacto con su supervisor o administrador)", errormessage);}
+
+
+			else if (lang.contains("cs")){
+				Assert.assertEquals("neplatné uživatelské jméno nebo heslo .... (Pokud jste zapomněli uživatelské jméno nebo heslo, kontaktujte svého nadřízeného nebo administrátora)", errormessage);}		
 		driver.quit();
 	}
 	
-	@When("{string} is displayed")
-	public void dashboard_is_displayed (String string) {
-		String pagename = dashboard.getPageName();
-		Assert.assertTrue(pagename.equalsIgnoreCase(string));
+	@When("DASHBOARD is displayed")
+	public void dashboard_is_displayed () throws IOException {
+		WebElement card = driver.findElement(By.xpath("//app-card[1]//p[@class='title']"));
+		String cardnm =card.getText();
+        String pagename = dashboard.getPageName();
+        //Assert.assertTrue(pagename.equalsIgnoreCase(string));
+       
+		if (cardnm.equalsIgnoreCase("Patient Call")){			
+			Assert.assertEquals("DASHBOARD", pagename);}
+		
+		else if (cardnm.equalsIgnoreCase("Patientenruf")){
+			Assert.assertEquals("DASHBOARD", pagename);}
+				
+			else if (cardnm.equalsIgnoreCase("Appel du patient")){
+				Assert.assertEquals("TABLEAU DE BORD", pagename);}
+		
+			else if (cardnm.equalsIgnoreCase("Patientanrop")){
+				Assert.assertEquals("INSTRUMENTBRÄDA", pagename);}
+	
+			else if (cardnm.equalsIgnoreCase("Llamada del paciente")){
+				Assert.assertEquals("TABLERO", pagename);}
+
+			else if (cardnm.equalsIgnoreCase("Volání Pacienta")){
+				Assert.assertEquals("INFORMAČNÍ PANEL", pagename);}		
+		
 	}
 	@And ("^Beacon Alert is cleared with reason (.+)$")
 	public void Beacon_Alert_is_cleared(String comment) {	

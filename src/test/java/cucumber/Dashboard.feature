@@ -1,6 +1,6 @@
 @tag
-Feature: Clearing the Alert
-  test to clear the Active Alert
+Feature: Dashboard
+  Feature to test the Dashboard functionality
 
   Background:
     Given Open the browser and enter the url
@@ -8,7 +8,7 @@ Feature: Clearing the Alert
   @tag1
   Scenario Outline: Device Status Alert Clear
     Given Logged in with username <name> and password <password>  
-    When "DASHBOARD" is displayed 
+    When DASHBOARD is displayed 
     And Device Status Alert is cleared with reason <comment>       
     Then Logout of the Application
 
@@ -20,7 +20,7 @@ Feature: Clearing the Alert
     @tag2
   Scenario Outline: Maintenance Alert Clear
     Given Logged in with username <name> and password <password>  
-    When "DASHBOARD" is displayed 
+    When DASHBOARD is displayed 
     And Maintenance Alert is cleared with reason <comment>       
     Then Logout of the Application
 
@@ -31,7 +31,7 @@ Feature: Clearing the Alert
    @tag3
   Scenario Outline: Beacon Alert Clear
     Given Logged in with username <name> and password <password>  
-    When "DASHBOARD" is displayed 
+    When DASHBOARD is displayed 
     And Beacon Alert is cleared with reason <comment>       
     Then Logout of the Application
 
@@ -42,7 +42,7 @@ Feature: Clearing the Alert
     @tag4  
     Scenario Outline: Check Charts Tab
     Given Logged in with username <name> and password <password>  
-    When "DASHBOARD" is displayed 
+    When DASHBOARD is displayed 
     And Check Charts Information       
     Then Logout of the Application
 
@@ -53,7 +53,7 @@ Feature: Clearing the Alert
      @tag5  
     Scenario Outline: Check AlarmHistory Tab
     Given Logged in with username <name> and password <password>  
-    When "DASHBOARD" is displayed 
+    When DASHBOARD is displayed 
     And Check Alarm History Information       
     Then Logout of the Application
 
@@ -64,7 +64,7 @@ Feature: Clearing the Alert
      @tag6  
     Scenario Outline: Check MableHistory Tab
     Given Logged in with username <name> and password <password>  
-    When "DASHBOARD" is displayed 
+    When DASHBOARD is displayed 
     And Check Mable History Information       
     Then Logout of the Application
 
